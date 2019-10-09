@@ -42,12 +42,6 @@ namespace XRTK.Examples.Demos.Input
 
         #region Monobehaviour Implementation
 
-        private void Awake()
-        {
-            Debug.Log($"[Awake] Is XRTK initialized? {MixedRealityToolkit.Instance != null}");
-            Debug.Log($"[Awake] Is Input System initialized? {MixedRealityToolkit.InputSystem != null}");
-        }
-
         protected override void OnEnable()
         {
             base.OnEnable();
