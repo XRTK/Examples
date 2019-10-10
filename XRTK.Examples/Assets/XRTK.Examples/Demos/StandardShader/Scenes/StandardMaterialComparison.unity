@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1428268608}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12866,7 +12866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229001241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: -2, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542572903}
@@ -16521,18 +16521,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 45
       objectReference: {fileID: 0}
-    - target: {fileID: 1149545904682892, guid: 9f0e486d93ce4890a42b9b31ce5d74e9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171793634254456, guid: 9f0e486d93ce4890a42b9b31ce5d74e9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1054075472835142, guid: 9f0e486d93ce4890a42b9b31ce5d74e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114107642412081004, guid: 9f0e486d93ce4890a42b9b31ce5d74e9,
         type: 3}
       propertyPath: m_Text
@@ -16565,11 +16553,6 @@ PrefabInstance:
         avg math (8..56)\n // Stats for Fragment shader:\n //      d3d11: 47 avg math
         (1..89), 0 avg texture (0..1)\n\n\n"
       objectReference: {fileID: 0}
-    - target: {fileID: 224745427211728820, guid: 9f0e486d93ce4890a42b9b31ce5d74e9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.025
-      objectReference: {fileID: 0}
     - target: {fileID: 114121190672569774, guid: 9f0e486d93ce4890a42b9b31ce5d74e9,
         type: 3}
       propertyPath: m_Text
@@ -16579,6 +16562,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Unity/Standard Shader
+      objectReference: {fileID: 0}
+    - target: {fileID: 224745427211728820, guid: 9f0e486d93ce4890a42b9b31ce5d74e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149545904682892, guid: 9f0e486d93ce4890a42b9b31ce5d74e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171793634254456, guid: 9f0e486d93ce4890a42b9b31ce5d74e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054075472835142, guid: 9f0e486d93ce4890a42b9b31ce5d74e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f0e486d93ce4890a42b9b31ce5d74e9, type: 3}
