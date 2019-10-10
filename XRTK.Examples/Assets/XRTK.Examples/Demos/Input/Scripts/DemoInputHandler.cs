@@ -42,12 +42,6 @@ namespace XRTK.Examples.Demos.Input
 
         #region Monobehaviour Implementation
 
-        private void Awake()
-        {
-            Debug.Log($"[Awake] Is XRTK initialized? {MixedRealityToolkit.Instance != null}");
-            Debug.Log($"[Awake] Is Input System initialized? {MixedRealityToolkit.InputSystem != null}");
-        }
-
         protected override void OnEnable()
         {
             base.OnEnable();
@@ -148,6 +142,8 @@ namespace XRTK.Examples.Demos.Input
 
         #endregion IMixedRealitySourceStateHandler Implementation
 
+        #region IMixedRealityGestureHandler Implementation
+
         void IMixedRealityGestureHandler.OnGestureStarted(InputEventData eventData)
         {
             Debug.Log($"[OnGestureStarted] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
@@ -197,5 +193,7 @@ namespace XRTK.Examples.Demos.Input
         {
             Debug.Log($"[OnGestureCanceled] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
         }
+
+        #endregion IMixedRealityGestureHandler Implementation
     }
 }

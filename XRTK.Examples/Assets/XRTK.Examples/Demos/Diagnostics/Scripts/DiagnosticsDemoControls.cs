@@ -17,42 +17,10 @@ namespace XRTK.Examples.Demos
                 return;
             }
 
-            await new WaitUntil(() => MixedRealityToolkit.DiagnosticsSystem != null);
+            await MixedRealityToolkit.DiagnosticsSystem.WaitUntil(system => system != null);
 
             // Turn on the diagnostics for this demo.
-            MixedRealityToolkit.DiagnosticsSystem.Visible = true;
-        }
-
-        /// <summary>
-        /// Shows or hides the diagnostics information display.
-        /// </summary>
-        public void OnToggleDiagnostics()
-        {
-            MixedRealityToolkit.DiagnosticsSystem.Visible = !MixedRealityToolkit.DiagnosticsSystem.Visible;
-        }
-
-        /// <summary>
-        /// Shows or hides the frame rate display.
-        /// </summary>
-        public void OnToggleFrameRate()
-        {
-            MixedRealityToolkit.DiagnosticsSystem.ShowFps = !MixedRealityToolkit.DiagnosticsSystem.ShowFps;
-        }
-
-        /// <summary>
-        /// Shows or hides the memory usage display.
-        /// </summary>
-        public void OnToggleMemory()
-        {
-            MixedRealityToolkit.DiagnosticsSystem.ShowMemory = !MixedRealityToolkit.DiagnosticsSystem.ShowMemory;
-        }
-
-        /// <summary>
-        /// Shows or hides the processor usage display.
-        /// </summary>
-        public void OnToggleProcessor()
-        {
-            MixedRealityToolkit.DiagnosticsSystem.ShowCpu = !MixedRealityToolkit.DiagnosticsSystem.ShowCpu;
+            MixedRealityToolkit.DiagnosticsSystem.ShowDiagnostics = true;
         }
     }
 }
