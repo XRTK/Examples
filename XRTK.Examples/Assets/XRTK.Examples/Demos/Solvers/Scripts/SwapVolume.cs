@@ -70,11 +70,11 @@ namespace XRTK.Examples.Demos
                     {
                         if (controller.ControllerHandedness == Handedness.Right)
                         {
-                            solverHandler.TrackedObjectToReference = TrackedObjectType.MotionControllerRight;
+                            solverHandler.TrackedObjectToReference = TrackedObjectType.RightHandOrController;
                         }
                         else if (controller.ControllerHandedness == Handedness.Left)
                         {
-                            solverHandler.TrackedObjectToReference = TrackedObjectType.MotionControllerLeft;
+                            solverHandler.TrackedObjectToReference = TrackedObjectType.LeftHandOrController;
                         }
                     }
                 }
