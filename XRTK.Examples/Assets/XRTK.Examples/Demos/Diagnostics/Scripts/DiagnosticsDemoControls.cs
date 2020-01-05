@@ -20,7 +20,7 @@ namespace XRTK.Examples.Demos
             await MixedRealityToolkit.DiagnosticsSystem.WaitUntil(system => system != null);
 
             // Turn on the diagnostics for this demo.
-            MixedRealityToolkit.DiagnosticsSystem.ShowDiagnostics = true;
+            MixedRealityToolkit.DiagnosticsSystem.IsWindowEnabled = true;
         }
     }
 }
