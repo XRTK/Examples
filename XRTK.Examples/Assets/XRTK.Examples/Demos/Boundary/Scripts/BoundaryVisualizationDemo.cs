@@ -41,7 +41,7 @@ namespace XRTK.Examples.Demos
         {
             markerParent = new GameObject();
             markerParent.name = "Boundary Demo Markers";
-            markerParent.transform.parent = MixedRealityToolkit.CameraSystem.CameraRig.PlayspaceTransform;
+            markerParent.transform.parent = MixedRealityToolkit.CameraSystem.MainCameraRig.PlayspaceTransform;
         }
 
         private void Start()

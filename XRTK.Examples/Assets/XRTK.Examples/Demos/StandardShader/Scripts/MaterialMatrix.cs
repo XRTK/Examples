@@ -119,4 +119,29 @@ namespace XRTK.Examples.Demos.StandardShader
             }
         }
     }
+
+#if UNITY_EDITOR
+
+    /// <summary>
+    /// Editor to build a matrix of spheres demonstrating a spectrum of material properties.
+    /// </summary>
+    [UnityEditor.CustomEditor(typeof(MaterialMatrix))]
+    public class MaterialMatrixInspector : UnityEditor.Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            if (GUILayout.Button("Build"))
+            {
+                var materialMatrix = target as MaterialMatrix;
+                Debug.Assert(materialMatrix != null);
+                materialMatrix.BuildMatrix();
+
+                UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+            }
+        }
+    }
+
+#endif
 }
