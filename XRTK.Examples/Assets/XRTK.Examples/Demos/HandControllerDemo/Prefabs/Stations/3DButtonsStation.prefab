@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.057, y: -0.054}
+  m_AnchoredPosition: {x: -0.057, y: -0.189}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &9118797313362922116
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.33739808, y: 2.5056193, z: -3.4895587, w: 0.6489873}
+  m_margin: {x: -2.0462594, y: 2.5056193, z: -5.4222517, w: 0.6489873}
   m_textInfo:
     textComponent: {fileID: 947678904387002240}
     characterCount: 15
@@ -232,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2630062789289409761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 1.117, z: 0}
+  m_LocalPosition: {x: -0.2, y: 1.0779, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 2630062789396429987}
@@ -557,7 +557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2630062789701760526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 1.117, z: 0}
+  m_LocalPosition: {x: 0.2, y: 1.0779, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 2630062790906564463}
@@ -680,7 +680,6 @@ Transform:
   - {fileID: 2630062789289409760}
   - {fileID: 2630062789991357132}
   - {fileID: 2630062789701760513}
-  - {fileID: 7064193791642024364}
   - {fileID: 6824543555514703443}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -917,7 +916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2630062789991357133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.117, z: 0}
+  m_LocalPosition: {x: 0, y: 1.0779, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 2630062789939338717}
@@ -1225,7 +1224,7 @@ GameObject:
   - component: {fileID: 7064193791642024364}
   - component: {fileID: 3940439328445335817}
   m_Layer: 0
-  m_Name: ButtonsStationResultPanel
+  m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1238,14 +1237,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5360001362302436998}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.565, z: 0.04}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.528, z: 0.4802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6533076157036590412}
   - {fileID: 8811572715314342649}
-  m_Father: {fileID: 2630062789931494844}
-  m_RootOrder: 3
+  m_Father: {fileID: 6824543555514703443}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3940439328445335817
 MonoBehaviour:
@@ -1439,7 +1438,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.33739808, y: 2.5056193, z: -3.4895587, w: -3.8917878}
+  m_margin: {x: -2.368373, y: 2.5056193, z: -6.195328, w: -3.8917878}
   m_textInfo:
     textComponent: {fileID: 968222496099263036}
     characterCount: 141
@@ -1447,7 +1446,7 @@ MonoBehaviour:
     spaceCount: 21
     wordCount: 22
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1472,31 +1471,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2630062789931494844}
     m_Modifications:
-    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
-        type: 3}
-      propertyPath: m_text
-      value: 3D UI / Interaction
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6428752815800050302, guid: db25347d793f78d4ab498683f2900984,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 99809880598854777, guid: db25347d793f78d4ab498683f2900984,
         type: 3}
       propertyPath: m_Name
@@ -1540,7 +1514,7 @@ PrefabInstance:
     - target: {fileID: 3979424322241285738, guid: db25347d793f78d4ab498683f2900984,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3979424322241285738, guid: db25347d793f78d4ab498683f2900984,
         type: 3}
@@ -1556,6 +1530,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
+        type: 3}
+      propertyPath: m_text
+      value: 3D UI / Interaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428752815800050302, guid: db25347d793f78d4ab498683f2900984,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db25347d793f78d4ab498683f2900984, type: 3}
