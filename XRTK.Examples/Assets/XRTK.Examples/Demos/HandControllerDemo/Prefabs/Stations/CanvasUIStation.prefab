@@ -1630,6 +1630,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6737146738830642439}
     m_Modifications:
+    - target: {fileID: 99809880598854777, guid: db25347d793f78d4ab498683f2900984,
+        type: 3}
+      propertyPath: m_Name
+      value: ExamplePodium
+      objectReference: {fileID: 0}
     - target: {fileID: 3979424322241285738, guid: db25347d793f78d4ab498683f2900984,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1685,10 +1690,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 99809880598854777, guid: db25347d793f78d4ab498683f2900984,
+    - target: {fileID: 6428752815800050302, guid: db25347d793f78d4ab498683f2900984,
         type: 3}
-      propertyPath: m_Name
-      value: ExamplePodium
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7977410511136027949, guid: db25347d793f78d4ab498683f2900984,
         type: 3}
@@ -1709,11 +1714,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6428752815800050302, guid: db25347d793f78d4ab498683f2900984,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db25347d793f78d4ab498683f2900984, type: 3}
