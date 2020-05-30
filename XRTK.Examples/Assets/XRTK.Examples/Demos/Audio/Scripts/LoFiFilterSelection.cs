@@ -4,6 +4,7 @@
 using XRTK.EventDatum.Input;
 using XRTK.Interfaces.InputSystem.Handlers;
 using UnityEngine;
+using XRTK.Extensions;
 using XRTK.SDK.Audio.Influencers;
 
 namespace XRTK.Examples.Demos
@@ -51,7 +52,7 @@ namespace XRTK.Examples.Demos
         public void OnPointerClicked(MixedRealityPointerEventData eventData)
         {
             // Only proceed if the effect script is attached.
-            if (loFiEffect == null) { return; }
+            if (loFiEffect.IsNull()) { return; }
 
             // Get the current source quality setting.
             AudioLoFiSourceQualityType sourceQuality = loFiEffect.SourceQuality;
