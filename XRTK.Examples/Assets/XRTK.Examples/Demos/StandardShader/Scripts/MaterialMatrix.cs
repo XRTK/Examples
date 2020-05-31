@@ -4,6 +4,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using XRTK.Extensions;
 
 namespace XRTK.Examples.Demos.StandardShader
 {
@@ -42,17 +43,10 @@ namespace XRTK.Examples.Demos.StandardShader
             {
                 Transform child = children[i];
 
-                if (Application.isPlaying)
-                {
-                    Destroy(child.gameObject);
-                }
-                else
-                {
-                    DestroyImmediate(child.gameObject);
-                }
+                child.gameObject.Destroy();
             }
 
-            if (material == null)
+            if (material.IsNull())
             {
                 Debug.LogError("Failed to build material matrix due to missing material.");
 

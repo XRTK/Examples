@@ -3,10 +3,10 @@
 
 using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
-using XRTK.Interfaces.Providers.Controllers;
 using XRTK.Interfaces.InputSystem.Handlers;
 using XRTK.Services;
 using UnityEngine;
+using XRTK.Extensions;
 using XRTK.SDK.Utilities.Solvers;
 
 namespace XRTK.Examples.Demos
@@ -35,7 +35,7 @@ namespace XRTK.Examples.Demos
         private void Awake()
         {
             // This example script depends on both GameObjects being properly set.
-            if (hideThisObject == null || spawnThisPrefab == null)
+            if (hideThisObject.IsNull() || spawnThisPrefab.IsNull())
             {
                 Destroy(gameObject);
             }
@@ -48,11 +48,13 @@ namespace XRTK.Examples.Demos
             solverHandler = spawnedObject.GetComponent<SolverHandler>();
         }
 
-
+        /// <inheritdoc />
         public void OnPointerUp(MixedRealityPointerEventData eventData) { }
 
+        /// <inheritdoc />
         public void OnPointerDown(MixedRealityPointerEventData eventData) { }
 
+        /// <inheritdoc />
         public void OnPointerClicked(MixedRealityPointerEventData eventData)
         {
             if (spawnedObject.activeSelf)
@@ -64,9 +66,9 @@ namespace XRTK.Examples.Demos
             {
                 spawnedObject.SetActive(true);
 
-                if (updateSolverTargetToClickSource && solverHandler != null)
+                if (updateSolverTargetToClickSource && !solverHandler.IsNull())
                 {
-                    if (MixedRealityToolkit.InputSystem.TryGetController(eventData.InputSource, out IMixedRealityController controller))
+                    if (MixedRealityToolkit.InputSystem.TryGetController(eventData.InputSource, out var controller))
                     {
                         if (controller.ControllerHandedness == Handedness.Right)
                         {
@@ -87,8 +89,8 @@ namespace XRTK.Examples.Demos
 
         private void OnDestroy()
         {
-            Destroy(spawnedObject);
-            Destroy(hideThisObject);
+            spawnedObject.Destroy();
+            hideThisObject.Destroy();
         }
     }
 }

@@ -1,8 +1,9 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) XRTK. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using XRTK.Services;
 using System;
+using XRTK.Extensions;
+using XRTK.Services;
 
 namespace XRTK.Examples.Demos.CustomExtensionServices
 {
@@ -20,7 +21,7 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
         public DemoCustomExtensionService(string name, uint priority, DemoCustomExtensionServiceProfile profile)
                 : base(name, priority, profile)
         {
-            if (profile == null)
+            if (profile.IsNull())
             {
                 throw new Exception($"{GetType().Name} expects a {nameof(DemoCustomExtensionServiceProfile)}");
             }

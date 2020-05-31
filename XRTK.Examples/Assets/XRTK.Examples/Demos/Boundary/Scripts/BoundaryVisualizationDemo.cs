@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using XRTK.Definitions.BoundarySystem;
 using XRTK.EventDatum.Boundary;
 using XRTK.Interfaces.BoundarySystem;
 using XRTK.Services;
@@ -9,6 +8,7 @@ using System.Collections.Generic;
 using XRTK.Utilities.Async;
 using UnityEngine;
 using UnityEngine.Experimental.XR;
+using XRTK.Extensions;
 
 namespace XRTK.Examples.Demos
 {
@@ -105,8 +105,9 @@ namespace XRTK.Examples.Demos
                 return;
             }
 
-            MixedRealityBoundaryVisualizationProfile visualizationProfile = MixedRealityToolkit.Instance.ActiveProfile.BoundaryVisualizationProfile;
-            if (visualizationProfile == null)
+            var visualizationProfile = MixedRealityToolkit.Instance.ActiveProfile.BoundaryVisualizationProfile;
+
+            if (visualizationProfile.IsNull())
             {
                 // We do not have a visualization profile configured, therefore do not render the indicators.
                 return;
