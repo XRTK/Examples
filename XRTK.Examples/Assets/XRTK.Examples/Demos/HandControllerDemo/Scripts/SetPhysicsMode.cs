@@ -1,98 +1,86 @@
 ﻿using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using XRTK.Definitions.Controllers.Hands;
 using XRTK.Interfaces.Providers.Controllers.Hands;
 using XRTK.Services;
 
-public class SetPhysicsMode : MonoBehaviour
+namespace XRTK.Examples.Demos.HandController
 {
-    private Vector3[] startPositions;
-    private Quaternion[] startRotations;
-    private List<IMixedRealityHandControllerDataProvider> providers;
-    private bool physicsEnabled;
-    private HandBoundsMode boundsMode;
-
-    [SerializeField]
-    private TextMeshPro physicsStateText = null;
-
-    [SerializeField]
-    private Transform[] objects = null;
-
-    private void Start()
+    public class SetPhysicsMode : MonoBehaviour
     {
-        startPositions = new Vector3[objects.Length];
-        startRotations = new Quaternion[objects.Length];
-        providers = MixedRealityToolkit.GetActiveServices<IMixedRealityHandControllerDataProvider>();
-        physicsEnabled = providers[0].HandPhysicsEnabled;
-        boundsMode = providers[0].BoundsMode;
+        private Vector3[] startPositions;
+        private Quaternion[] startRotations;
+        private List<IMixedRealityHandControllerDataProvider> providers;
 
-        for (int i = 0; i < objects.Length; i++)
+        [SerializeField]
+        private Transform[] objects = null;
+
+        [SerializeField]
+        private Toggle physicsToggle = null;
+
+        private void Start()
         {
-            startPositions[i] = objects[i].position;
-            startRotations[i] = objects[i].rotation;
-        }
-    }
+            startPositions = new Vector3[objects.Length];
+            startRotations = new Quaternion[objects.Length];
+            providers = MixedRealityToolkit.GetActiveServices<IMixedRealityHandControllerDataProvider>();
+            physicsToggle.isOn = providers[0].HandPhysicsEnabled;
 
-    public void EnablePhysics()
-    {
-        for (int i = 0; i < providers.Count; i++)
-        {
-            providers[i].HandPhysicsEnabled = true;    
-        }
-
-        physicsEnabled = true;
-        UpdateStateText();
-    }
-
-    public void DisablePhysics()
-    {
-        for (int i = 0; i < objects.Length; i++)
-        {
-            objects[i].position = startPositions[i];
-            objects[i].rotation = startRotations[i];
+            for (int i = 0; i < objects.Length; i++)
+            {
+                startPositions[i] = objects[i].position;
+                startRotations[i] = objects[i].rotation;
+            }
         }
 
-        for (int i = 0; i < providers.Count; i++)
+        public void TogglePhysics(bool isOn)
         {
-            providers[i].HandPhysicsEnabled = false;
+            if (isOn)
+            {
+                EnablePhysics();
+            }
+            else
+            {
+                DisablePhysics();
+            }
         }
 
-        physicsEnabled = false;
-        UpdateStateText();
-    }
-
-    public void SetHandBoundsMode()
-    {
-        for (int i = 0; i < providers.Count; i++)
+        private void EnablePhysics()
         {
-            providers[i].BoundsMode = HandBoundsMode.Hand;
+            for (int i = 0; i < providers.Count; i++)
+            {
+                providers[i].HandPhysicsEnabled = true;
+            }
         }
 
-        boundsMode = HandBoundsMode.Hand;
-        UpdateStateText();
-    }
-
-    public void SetFingerBoundsMode()
-    {
-        for (int i = 0; i < providers.Count; i++)
+        private void DisablePhysics()
         {
-            providers[i].BoundsMode = HandBoundsMode.Fingers;
+            for (int i = 0; i < objects.Length; i++)
+            {
+                objects[i].position = startPositions[i];
+                objects[i].rotation = startRotations[i];
+            }
+
+            for (int i = 0; i < providers.Count; i++)
+            {
+                providers[i].HandPhysicsEnabled = false;
+            }
         }
 
-        boundsMode = HandBoundsMode.Fingers;
-        UpdateStateText();
-    }
-
-    private void UpdateStateText()
-    {
-        if (physicsEnabled)
+        public void SetHandBoundsMode()
         {
-            physicsStateText.text = $"Physics: On / {boundsMode}";
+            for (int i = 0; i < providers.Count; i++)
+            {
+                providers[i].BoundsMode = HandBoundsMode.Hand;
+            }
         }
-        else
+
+        public void SetFingerBoundsMode()
         {
-            physicsStateText.text = $"Physics: Off / {boundsMode}";
+            for (int i = 0; i < providers.Count; i++)
+            {
+                providers[i].BoundsMode = HandBoundsMode.Fingers;
+            }
         }
     }
 }
