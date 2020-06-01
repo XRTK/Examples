@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Main
+    second: {fileID: 2100000, guid: 8ab318ea9b84e8f45ace1d1b9bd83f69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: 8ab318ea9b84e8f45ace1d1b9bd83f69, type: 2}
   materials:
@@ -55,8 +60,8 @@ ModelImporter:
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
