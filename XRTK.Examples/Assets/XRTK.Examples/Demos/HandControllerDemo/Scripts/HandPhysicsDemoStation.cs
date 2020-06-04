@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿// Copyright (c) XRTK. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using XRTK.Definitions.Controllers.Hands;
@@ -7,30 +10,28 @@ using XRTK.Services;
 
 namespace XRTK.Examples.Demos.HandController
 {
-    public class SetPhysicsMode : MonoBehaviour
+    /// <summary>
+    /// Demo showcases hand physics settings and usage.
+    /// </summary>
+    public class HandPhysicsDemoStation : MonoBehaviour
     {
-        private Vector3[] startPositions;
-        private Quaternion[] startRotations;
         private List<IMixedRealityHandControllerDataProvider> providers;
-
-        [SerializeField]
-        private Transform[] objects = null;
 
         [SerializeField]
         private Toggle physicsToggle = null;
 
+        [SerializeField]
+        private Image handsModeEnabledImage = null;
+
+        [SerializeField]
+        private Image fingersModeEnabledImage = null;
+
         private void Start()
         {
-            startPositions = new Vector3[objects.Length];
-            startRotations = new Quaternion[objects.Length];
             providers = MixedRealityToolkit.GetActiveServices<IMixedRealityHandControllerDataProvider>();
             physicsToggle.isOn = providers[0].HandPhysicsEnabled;
-
-            for (int i = 0; i < objects.Length; i++)
-            {
-                startPositions[i] = objects[i].position;
-                startRotations[i] = objects[i].rotation;
-            }
+            handsModeEnabledImage.gameObject.SetActive(providers[0].BoundsMode == HandBoundsMode.Hand);
+            fingersModeEnabledImage.gameObject.SetActive(providers[0].BoundsMode == HandBoundsMode.Fingers);
         }
 
         public void TogglePhysics(bool isOn)
@@ -55,12 +56,6 @@ namespace XRTK.Examples.Demos.HandController
 
         private void DisablePhysics()
         {
-            for (int i = 0; i < objects.Length; i++)
-            {
-                objects[i].position = startPositions[i];
-                objects[i].rotation = startRotations[i];
-            }
-
             for (int i = 0; i < providers.Count; i++)
             {
                 providers[i].HandPhysicsEnabled = false;
@@ -73,6 +68,9 @@ namespace XRTK.Examples.Demos.HandController
             {
                 providers[i].BoundsMode = HandBoundsMode.Hand;
             }
+
+            fingersModeEnabledImage.gameObject.SetActive(false);
+            handsModeEnabledImage.gameObject.SetActive(true);
         }
 
         public void SetFingerBoundsMode()
@@ -81,6 +79,9 @@ namespace XRTK.Examples.Demos.HandController
             {
                 providers[i].BoundsMode = HandBoundsMode.Fingers;
             }
+
+            handsModeEnabledImage.gameObject.SetActive(false);
+            fingersModeEnabledImage.gameObject.SetActive(true);
         }
     }
 }
