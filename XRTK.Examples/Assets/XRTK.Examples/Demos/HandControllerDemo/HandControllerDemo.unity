@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 0
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -239,80 +239,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1588572285990137153, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576076822124528875, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -1.3192434
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576076822124528875, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 1.3718863
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576076822124528875, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 0.17685485
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565947390343320053, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.40729657
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565947390343320053, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.913296
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565947390343320053, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 48.070004
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565947390343320053, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.035
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565947390343320053, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 1873981361997093419, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878972230391767659, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878972230391767659, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878972230391767659, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878972230391767659, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878972230391767659, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a950c2c5c10d94cabf60a3686301c2, type: 3}

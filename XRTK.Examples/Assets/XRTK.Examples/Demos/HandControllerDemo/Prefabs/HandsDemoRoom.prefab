@@ -652,7 +652,7 @@ PrefabInstance:
     - target: {fileID: 5737446409969326659, guid: 94968a66f3abab648ad77f9180dab5db,
         type: 3}
       propertyPath: m_Name
-      value: DemoRoom
+      value: DemoRoomWithColliders
       objectReference: {fileID: 0}
     - target: {fileID: 5737446409969326659, guid: 94968a66f3abab648ad77f9180dab5db,
         type: 3}
@@ -820,6 +820,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4642275038200015054, guid: 73791a9450e587a4c852e956e1d928d4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828648148112146784, guid: 73791a9450e587a4c852e956e1d928d4,
         type: 3}
       propertyPath: m_Mesh
       value: 
