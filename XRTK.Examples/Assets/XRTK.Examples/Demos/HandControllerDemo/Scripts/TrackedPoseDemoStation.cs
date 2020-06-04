@@ -29,14 +29,14 @@ namespace XRTK.Examples.Demos.HandController
             if (eventData.Handedness == Definitions.Utilities.Handedness.Left)
             {
                 var trackedPose = eventData.InputData.TrackedPoseId;
-                var pose = trackedPose != null ? trackedPose : "Unknown";
-                leftHandPoseText.text = $"Left Pose: {pose}";
+                var pose = trackedPose ?? "Unknown";
+                leftHandPoseText.text = pose;
             }
             else if (eventData.Handedness == Definitions.Utilities.Handedness.Right)
             {
                 var trackedPose = eventData.InputData.TrackedPoseId;
-                var pose = trackedPose != null ? trackedPose : "Unknown";
-                rightHandPoseText.text = $"Right Pose: {pose}";
+                var pose = trackedPose ?? "Unknown";
+                rightHandPoseText.text = pose;
             }
         }
     }
