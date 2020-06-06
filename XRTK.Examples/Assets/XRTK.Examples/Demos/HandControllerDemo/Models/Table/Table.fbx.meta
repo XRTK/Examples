@@ -24,6 +24,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Table
     second: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TableLights
+    second: {fileID: 2100000, guid: a3cb22cb41c60a64d87f4d51c527c685, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TableMain
+    second: {fileID: 2100000, guid: e6be844fc4293414b84a1a632a58c9af, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
