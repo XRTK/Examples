@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50d0c2910ab4e8a9d14709c5f17506e, type: 3}
   m_Name: MixedRealityBoundaryVisualizationProfile
   m_EditorClassIdentifier: 
-  configurations: []
+  configurations:
+  - instancedType:
+      reference: e61b047a-56ac-421a-b5f7-683fd44dd33c
+    name: Windows Mixed Reality Boundary Data Provider
+    priority: 0
+    platformEntries:
+      runtimePlatforms:
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
+    profile: {fileID: 0}
   showBoundary: 0
   boundaryHeight: 3
   boundaryMaterial: {fileID: 2100000, guid: f9f4fa1152cb478dab7c873b39fce41b, type: 2}
