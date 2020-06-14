@@ -544,25 +544,25 @@ PrefabInstance:
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_text
-      value: "Using XRTK's pose recognizer you can record and define custom hand poses
-        and have input actions raised when they are recognized.\n\nPlay around with
-        your hand poses and watch the system recognize them.\n\n\n<b>Left Hand Pose:\t\t\tRight
-        Hand Pose:</b>"
+      value: "Preview: Using XRTK's pose recognizer you will be able record and define
+        custom hand poses and raise input actions when they are recognized.\n\nPlay
+        around with your hand poses and watch the system recognize them.\n\n\n<b>Left
+        Hand Pose:\t\t\tRight Hand Pose:</b>"
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 236
+      value: 248
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 43
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 39
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
