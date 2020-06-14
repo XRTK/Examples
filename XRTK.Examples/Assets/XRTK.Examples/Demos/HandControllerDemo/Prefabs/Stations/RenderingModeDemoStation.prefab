@@ -326,7 +326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8075627532591384750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1070,11 +1070,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8075627532844080346}
     m_Modifications:
-    - target: {fileID: 1395175092093156036, guid: cde88c07859c20d4aa191c1dfbb51de9,
-        type: 3}
-      propertyPath: m_Name
-      value: UITextBoard
-      objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1130,25 +1125,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1395175092093156036, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_Name
+      value: UITextBoard
+      objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 268
+      value: 173
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 50
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 50
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
@@ -1158,9 +1158,8 @@ PrefabInstance:
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_text
-      value: 'By default hands joints are rendered. You can chose to not render hands
-        at all or have a hand mesh rendered, if the platform supports it. If not,
-        XRTK will default back to joints.
+      value: 'By default hands joints are rendered. You can also chose to not render
+        hands at all.
 
 
         You can even change the rendering mode while the application is running, give
