@@ -3,8 +3,11 @@
 
 using TMPro;
 using UnityEngine;
+using XRTK.Definitions.Devices;
+using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
 using XRTK.Interfaces.InputSystem.Handlers;
+using XRTK.Interfaces.Providers.Controllers.Hands;
 using XRTK.SDK.Input;
 
 namespace XRTK.Examples.Demos.HandController
@@ -13,7 +16,7 @@ namespace XRTK.Examples.Demos.HandController
     /// Demo script on how to handle changes in the recognized hand pose.
     /// </summary>
     [RequireComponent(typeof(InputSystemGlobalListener))]
-    public class TrackedPoseDemoStation : MonoBehaviour, IMixedRealityInputHandler<Definitions.Controllers.Hands.HandData>
+    public class TrackedPoseDemoStation : MonoBehaviour, IMixedRealitySourcePoseHandler
     {
         [SerializeField]
         [Tooltip("Text element to display currently tracked left hand pose.")]
@@ -23,18 +26,49 @@ namespace XRTK.Examples.Demos.HandController
         [Tooltip("Text element to display currently tracked right hand pose.")]
         private TextMeshPro rightHandPoseText = null;
 
-        /// <inheritdoc />
-        public void OnInputChanged(InputEventData<Definitions.Controllers.Hands.HandData> eventData)
+        public void OnSourceDetected(SourceStateEventData eventData)
         {
-            if (eventData.Handedness == Definitions.Utilities.Handedness.Left)
+
+        }
+
+        public void OnSourceLost(SourceStateEventData eventData)
+        {
+
+        }
+
+        public void OnSourcePoseChanged(SourcePoseEventData<TrackingState> eventData)
+        {
+
+        }
+
+        public void OnSourcePoseChanged(SourcePoseEventData<Vector2> eventData)
+        {
+
+        }
+
+        public void OnSourcePoseChanged(SourcePoseEventData<Vector3> eventData)
+        {
+
+        }
+
+        public void OnSourcePoseChanged(SourcePoseEventData<Quaternion> eventData)
+        {
+
+        }
+
+        public void OnSourcePoseChanged(SourcePoseEventData<MixedRealityPose> eventData)
+        {
+            if (eventData.Controller.ControllerHandedness == Handedness.Left &&
+                eventData.Controller is IMixedRealityHandController leftHandController)
             {
-                var trackedPose = eventData.InputData.TrackedPoseId;
+                var trackedPose = leftHandController.TrackedPoseId;
                 var pose = trackedPose ?? "Unknown";
                 leftHandPoseText.text = pose;
             }
-            else if (eventData.Handedness == Definitions.Utilities.Handedness.Right)
+            else if (eventData.Controller.ControllerHandedness == Handedness.Right &&
+                eventData.Controller is IMixedRealityHandController rightHandController)
             {
-                var trackedPose = eventData.InputData.TrackedPoseId;
+                var trackedPose = rightHandController.TrackedPoseId;
                 var pose = trackedPose ?? "Unknown";
                 rightHandPoseText.text = pose;
             }
