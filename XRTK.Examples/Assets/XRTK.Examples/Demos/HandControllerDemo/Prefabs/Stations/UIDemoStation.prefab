@@ -1311,6 +1311,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1341,11 +1346,6 @@ PrefabInstance:
       propertyPath: m_text
       value: Use your hands to interact with user interfaces. Please note that near
         interaction using hands is not supported for the legacy UGUI system.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde88c07859c20d4aa191c1dfbb51de9, type: 3}

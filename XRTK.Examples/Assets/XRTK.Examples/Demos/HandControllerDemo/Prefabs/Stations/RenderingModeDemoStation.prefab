@@ -1070,6 +1070,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8075627532844080346}
     m_Modifications:
+    - target: {fileID: 1395175092093156036, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_Name
+      value: UITextBoard
+      objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1125,10 +1130,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1395175092093156036, guid: cde88c07859c20d4aa191c1dfbb51de9,
+    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
-      propertyPath: m_Name
-      value: UITextBoard
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
@@ -1164,11 +1169,6 @@ PrefabInstance:
 
         You can even change the rendering mode while the application is running, give
         it a try!'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde88c07859c20d4aa191c1dfbb51de9, type: 3}

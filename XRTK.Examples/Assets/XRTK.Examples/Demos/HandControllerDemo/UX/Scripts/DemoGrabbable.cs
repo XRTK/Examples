@@ -7,12 +7,14 @@ using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
 using XRTK.Interfaces.InputSystem.Handlers;
 using XRTK.SDK.Input.Handlers;
+using XRTK.Services;
 
 namespace XRTK.Examples.Demos.HandController.UX
 {
     public class DemoGrabbable : BaseInputHandler, IMixedRealityInputHandler, IMixedRealityInputHandler<MixedRealityPose>
     {
         private bool isGripped;
+        private Handedness gripHandedness;
 
         [SerializeField]
         private MixedRealityInputAction grabAction = MixedRealityInputAction.None;
@@ -27,7 +29,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.MixedRealityInputAction == gripPoseAction && isGripped)
+            if (eventData.Handedness == gripHandedness && eventData.MixedRealityInputAction == gripPoseAction && isGripped)
             {
                 transform.position = eventData.InputData.Position;
                 transform.rotation = eventData.InputData.Rotation;
@@ -41,16 +43,24 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.MixedRealityInputAction == grabAction)
+            if (!isGripped && eventData.MixedRealityInputAction == grabAction)
             {
                 isGripped = true;
+                gripHandedness = eventData.Handedness;
+
+                if (MixedRealityToolkit.IsInitialized &&
+                MixedRealityToolkit.InputSystem != null)
+                {
+                    MixedRealityToolkit.InputSystem.Register(gameObject);
+                }
+
                 eventData.Use();
             }
         }
 
         public void OnInputUp(InputEventData eventData)
         {
-            if (eventData.used)
+            if (eventData.used || eventData.Handedness != gripHandedness)
             {
                 return;
             }
@@ -58,6 +68,7 @@ namespace XRTK.Examples.Demos.HandController.UX
             if (eventData.MixedRealityInputAction == grabAction)
             {
                 isGripped = false;
+                MixedRealityToolkit.InputSystem?.Unregister(gameObject);
                 eventData.Use();
             }
         }
