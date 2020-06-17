@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cb60d17817596240b3ccad5a1afce4e
+guid: a2b513c20c2cc8745a3513b09d2db41a
 labels:
 - Prop
 ModelImporter:
@@ -9,8 +9,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Dumbbell
-    second: {fileID: 2100000, guid: fc4b25ee04bacf3448f619af93cd1ae5, type: 2}
+      name: CubeMain
+    second: {fileID: 2100000, guid: 190e94182a67fab41b7e7decad704803, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -38,17 +38,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -74,7 +74,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 3

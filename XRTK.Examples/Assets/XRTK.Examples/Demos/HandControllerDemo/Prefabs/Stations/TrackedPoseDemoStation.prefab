@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.179, y: -0.127}
+  m_AnchoredPosition: {x: -0.254, y: -0.09800008}
   m_SizeDelta: {x: 10, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2708797462369821611
@@ -301,7 +301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.154, y: -0.127}
+  m_AnchoredPosition: {x: 0.212, y: -0.098}
   m_SizeDelta: {x: 10, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5083205035208947470
@@ -536,6 +536,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3359556469139146967, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359556469139146967, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 35.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359556469139146967, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 17.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359556469139146967, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_Mesh
@@ -547,17 +567,17 @@ PrefabInstance:
       value: "Preview: Using XRTK's pose recognizer you will be able record and define
         custom hand poses and raise input actions when they are recognized.\n\nPlay
         around with your hand poses and watch the system recognize them.\n\n\n<b>Left
-        Hand Pose:\t\t\tRight Hand Pose:</b>"
+        Hand Pose:\t\t\t\t\tRight Hand Pose:</b>"
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 248
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 45
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cb60d17817596240b3ccad5a1afce4e
+guid: eb0472cf10f07e94c924be4a7f1289e2
 labels:
 - Prop
 ModelImporter:
@@ -9,8 +9,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Dumbbell
-    second: {fileID: 2100000, guid: fc4b25ee04bacf3448f619af93cd1ae5, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: fa446b5ebe0ddbe4d8bbe8eef4303aaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legs
+    second: {fileID: 2100000, guid: e6be844fc4293414b84a1a632a58c9af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate
+    second: {fileID: 2100000, guid: a3cb22cb41c60a64d87f4d51c527c685, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table
+    second: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TableLights
+    second: {fileID: 2100000, guid: a3cb22cb41c60a64d87f4d51c527c685, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TableMain
+    second: {fileID: 2100000, guid: e6be844fc4293414b84a1a632a58c9af, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,7 +75,7 @@ ModelImporter:
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -61,9 +86,9 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVPackMargin: 10
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60

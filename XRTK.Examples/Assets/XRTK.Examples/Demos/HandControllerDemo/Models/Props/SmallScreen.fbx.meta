@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cb60d17817596240b3ccad5a1afce4e
+guid: a9dcf362719a7b84db822e9c783255ed
 labels:
 - Prop
 ModelImporter:
@@ -9,8 +9,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Dumbbell
-    second: {fileID: 2100000, guid: fc4b25ee04bacf3448f619af93cd1ae5, type: 2}
+      name: Bezel
+    second: {fileID: 2100000, guid: b744ee0123c5d3c43805b64980e77808, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 837d9b367b574c64eb2fc883c281fef7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -38,19 +43,19 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
