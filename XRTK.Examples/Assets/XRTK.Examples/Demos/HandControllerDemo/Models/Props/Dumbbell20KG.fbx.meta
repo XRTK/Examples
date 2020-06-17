@@ -1,9 +1,16 @@
 fileFormatVersion: 2
-guid: 1d95bba3e603b8846bcd4c03196df145
+guid: 9b3134fbbf062b240b48420280636429
+labels:
+- Prop
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dumbbell
+    second: {fileID: 2100000, guid: 268e1e907f026394794f6bd652f72e97, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -36,7 +43,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1

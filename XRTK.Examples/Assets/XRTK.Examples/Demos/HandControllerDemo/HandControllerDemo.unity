@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -257,17 +257,22 @@ PrefabInstance:
     - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 6.87e-43
+      value: 2.485025e+22
       objectReference: {fileID: 0}
     - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 1.4033e-41
+      value: -1.8315286e+34
       objectReference: {fileID: 0}
     - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 949013
+      value: -1.5199237e-33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: -5.1466413e-36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a950c2c5c10d94cabf60a3686301c2, type: 3}
