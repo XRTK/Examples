@@ -56,6 +56,9 @@ MonoBehaviour:
     id: 3
     description: Grip Pose
     axisConstraint: 7
+  lerpDistanceThreshold: 0.05
+  lerpDuration: 1
+  gripPositionOffset: {x: 0, y: -0.015, z: 0.01}
 --- !u!114 &3383163642067022566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +82,9 @@ MonoBehaviour:
     id: 3
     description: Grip Pose
     axisConstraint: 7
+  lerpDistanceThreshold: 0.05
+  lerpDuration: 1
+  gripPositionOffset: {x: 0, y: -0.015, z: 0.01}
 --- !u!1001 &2297632540500548115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,6 +151,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759952238668644849, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099446215428049305, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}

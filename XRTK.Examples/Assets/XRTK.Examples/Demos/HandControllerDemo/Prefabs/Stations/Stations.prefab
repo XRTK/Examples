@@ -298,11 +298,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIDemoStation
       objectReference: {fileID: 0}
-    - target: {fileID: 7452328684346199848, guid: e81ea31c89d96344da8cad16b4b425c8,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2630062789931494844, guid: e81ea31c89d96344da8cad16b4b425c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -357,6 +352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452328684346199848, guid: e81ea31c89d96344da8cad16b4b425c8,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3161855505696765345, guid: e81ea31c89d96344da8cad16b4b425c8,
         type: 3}
@@ -418,6 +418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RenderingModeDemoStation
       objectReference: {fileID: 0}
+    - target: {fileID: 8075627531622110653, guid: b690fe7979cb7ef47a97b69e545d4cf7,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8075627532844080346, guid: b690fe7979cb7ef47a97b69e545d4cf7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -472,11 +477,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075627531622110653, guid: b690fe7979cb7ef47a97b69e545d4cf7,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8309842526848783887, guid: b690fe7979cb7ef47a97b69e545d4cf7,
         type: 3}

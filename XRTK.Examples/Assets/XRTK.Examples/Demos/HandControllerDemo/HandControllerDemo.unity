@@ -244,35 +244,5 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6487481321443042161, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204047519431309795, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 2.485025e+22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: -1.8315286e+34
-      objectReference: {fileID: 0}
-    - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: -1.5199237e-33
-      objectReference: {fileID: 0}
-    - target: {fileID: 5445446982851820398, guid: c9a950c2c5c10d94cabf60a3686301c2,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: -5.1466413e-36
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a950c2c5c10d94cabf60a3686301c2, type: 3}
