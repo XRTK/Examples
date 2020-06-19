@@ -974,7 +974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9005242860277057979}
   m_Layer: 0
-  m_Name: PhysicsObjects
+  m_Name: Pendulums
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -988,7 +988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2832963703951676890}
   m_LocalRotation: {x: -0, y: 0.14332889, z: -0, w: 0.9896751}
-  m_LocalPosition: {x: -0.12, y: -0.18148947, z: -0.531}
+  m_LocalPosition: {x: -0.028, y: -0.18148947, z: -0.483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6621818890847213052}
@@ -2476,37 +2476,37 @@ PrefabInstance:
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.939
+      value: -0.914
       objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.088
       objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.425
+      value: -0.616
       objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.42761233
       objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.28621915
+      value: -0.17803095
       objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.08630886
       objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9581642
+      value: 0.88204503
       objectReference: {fileID: 0}
     - target: {fileID: 1605970403135111723, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}

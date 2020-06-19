@@ -248,7 +248,7 @@ PrefabInstance:
     - target: {fileID: 8597200439184465949, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8597200439184465949, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
@@ -335,35 +335,135 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4697757439345548318, guid: c9a950c2c5c10d94cabf60a3686301c2,
+    - target: {fileID: 5719439220940198078, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_UseLimits
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 544795900040413086, guid: c9a950c2c5c10d94cabf60a3686301c2,
+    - target: {fileID: 5719439220940198078, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Limits.bounceMinVelocity
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6864927644101598609, guid: c9a950c2c5c10d94cabf60a3686301c2,
+    - target: {fileID: 5086519281971519614, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -33.264
+      propertyPath: m_UseLimits
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 811470436552002247, guid: c9a950c2c5c10d94cabf60a3686301c2,
+    - target: {fileID: 5086519281971519614, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 67.135
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7868347606313936595, guid: c9a950c2c5c10d94cabf60a3686301c2,
+    - target: {fileID: 4235243456043224209, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 64.524
+      propertyPath: m_UseLimits
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3197148408878814848, guid: c9a950c2c5c10d94cabf60a3686301c2,
+    - target: {fileID: 4235243456043224209, guid: c9a950c2c5c10d94cabf60a3686301c2,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 16.481
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599760534659824783, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599760534659824783, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816009262662344881, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816009262662344881, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077510452062628429, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077510452062628429, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576234437937921018, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576234437937921018, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419626992965314742, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419626992965314742, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449099563081034190, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449099563081034190, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848321472155368123, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848321472155368123, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584232606205644753, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584232606205644753, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599677368248044599, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599677368248044599, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222125697841228321, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222125697841228321, guid: c9a950c2c5c10d94cabf60a3686301c2,
+        type: 3}
+      propertyPath: m_Limits.bounceMinVelocity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a950c2c5c10d94cabf60a3686301c2, type: 3}

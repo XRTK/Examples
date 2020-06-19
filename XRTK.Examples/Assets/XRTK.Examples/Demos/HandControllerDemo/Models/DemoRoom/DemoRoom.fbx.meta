@@ -12,13 +12,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Ceiling
+    second: {fileID: 2100000, guid: 102936586ccd3584cb5cbddabd44b7db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: CeilingLight
     second: {fileID: 2100000, guid: b6d40cdaacaaf1a49a19b3d66800e6c6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Floor
-    second: {fileID: 2100000, guid: b5b3ed5d88a62af42865be398e18b526, type: 2}
+    second: {fileID: 2100000, guid: cf74d5511ccd18348ac270bd48c792cf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
