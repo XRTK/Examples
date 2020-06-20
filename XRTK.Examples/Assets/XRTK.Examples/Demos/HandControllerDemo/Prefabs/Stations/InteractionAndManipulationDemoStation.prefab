@@ -230,11 +230,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8287737130333665913, guid: cde88c07859c20d4aa191c1dfbb51de9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.035
-      objectReference: {fileID: 0}
     - target: {fileID: 3359556469139146967, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -250,35 +245,35 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.038
       objectReference: {fileID: 0}
+    - target: {fileID: 8287737130333665913, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.035
+      objectReference: {fileID: 0}
     - target: {fileID: 7759952238668644849, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 215
+      value: 404
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 42
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 43
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
@@ -288,12 +283,30 @@ PrefabInstance:
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_text
-      value: 'Grab things with your hands by making a fist. You can pick up things
-        this way and move them around.
+      value: 'Grab the dumbbells with your hands by making a fist. You can pick up
+        things this way and move them around. For this demo the dumbbells will return
+        to their original position when you drop them.
+
+
+        You can also use far interaction to manipulation objects. Try pinching at
+        the wooden cube.
+
+
+
 
 
         <i>Please note: Near interaction is very rudimentary at this point. A new
         UX system is due to arrive in v0.3 of XRTK.</i>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8099446215428049305, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}

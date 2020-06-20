@@ -789,31 +789,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1295537108281980463, guid: 33ea35711c3ff674ba9e119714e3f30b,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1461529183030134784, guid: 33ea35711c3ff674ba9e119714e3f30b,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3405830710287265346, guid: 33ea35711c3ff674ba9e119714e3f30b,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534277129539801182, guid: 33ea35711c3ff674ba9e119714e3f30b,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5426883864139223380, guid: 33ea35711c3ff674ba9e119714e3f30b,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6812354275025132786, guid: 33ea35711c3ff674ba9e119714e3f30b,
         type: 3}
       propertyPath: m_Mesh
@@ -829,7 +804,32 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5426883864139223380, guid: 33ea35711c3ff674ba9e119714e3f30b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6620012218194131194, guid: 33ea35711c3ff674ba9e119714e3f30b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461529183030134784, guid: 33ea35711c3ff674ba9e119714e3f30b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534277129539801182, guid: 33ea35711c3ff674ba9e119714e3f30b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295537108281980463, guid: 33ea35711c3ff674ba9e119714e3f30b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3405830710287265346, guid: 33ea35711c3ff674ba9e119714e3f30b,
         type: 3}
       propertyPath: m_Mesh
       value: 

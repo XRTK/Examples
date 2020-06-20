@@ -2543,11 +2543,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 17.2
       objectReference: {fileID: 0}
-    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1888747339441312895, guid: cde88c07859c20d4aa191c1dfbb51de9,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2580,6 +2575,11 @@ PrefabInstance:
         optionally as triggers, for them. Chose the level of detail between hand bounds,
         a box around the hand, or fingers which will create precise colliders for
         each part of the hand. Enable physics and play with the pendulum.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864453608972233791, guid: cde88c07859c20d4aa191c1dfbb51de9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde88c07859c20d4aa191c1dfbb51de9, type: 3}
