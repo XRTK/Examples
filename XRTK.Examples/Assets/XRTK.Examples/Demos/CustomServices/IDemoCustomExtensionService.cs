@@ -1,4 +1,8 @@
-﻿using XRTK.Interfaces;
+﻿// Copyright (c) XRTK. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using System;
+using XRTK.Interfaces;
 
 namespace XRTK.Examples.Demos.CustomExtensionServices
 {
@@ -10,9 +14,14 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
     public interface IDemoCustomExtensionService : IMixedRealityExtensionService
     {
         /// <summary>
+        /// A custom event.
+        /// </summary>
+        Action MyCustomEvent { get; set; }
+
+        /// <summary>
         /// A custom property accessor.
         /// </summary>
-        string MyCustomData { get; }
+        string MyCustomData { get; set; }
 
         /// <summary>
         /// A custom method call.
