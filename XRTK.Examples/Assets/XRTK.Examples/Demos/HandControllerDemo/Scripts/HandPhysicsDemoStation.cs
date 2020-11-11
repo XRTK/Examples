@@ -30,8 +30,8 @@ namespace XRTK.Examples.Demos.HandController
         {
             providers = MixedRealityToolkit.GetActiveServices<IMixedRealityHandControllerDataProvider>();
             physicsToggle.isOn = providers[0].HandPhysicsEnabled;
-            handsModeEnabledImage.gameObject.SetActive(providers[0].BoundsMode == HandBoundsMode.Hand);
-            fingersModeEnabledImage.gameObject.SetActive(providers[0].BoundsMode == HandBoundsMode.Fingers);
+            handsModeEnabledImage.gameObject.SetActive(providers[0].BoundsMode == HandBoundsLOD.Low);
+            fingersModeEnabledImage.gameObject.SetActive(providers[0].BoundsMode == HandBoundsLOD.High);
         }
 
         public void TogglePhysics(bool isOn)
@@ -66,7 +66,7 @@ namespace XRTK.Examples.Demos.HandController
         {
             for (int i = 0; i < providers.Count; i++)
             {
-                providers[i].BoundsMode = HandBoundsMode.Hand;
+                providers[i].BoundsMode = HandBoundsLOD.Low;
             }
 
             fingersModeEnabledImage.gameObject.SetActive(false);
@@ -77,7 +77,7 @@ namespace XRTK.Examples.Demos.HandController
         {
             for (int i = 0; i < providers.Count; i++)
             {
-                providers[i].BoundsMode = HandBoundsMode.Fingers;
+                providers[i].BoundsMode = HandBoundsLOD.High;
             }
 
             handsModeEnabledImage.gameObject.SetActive(false);
