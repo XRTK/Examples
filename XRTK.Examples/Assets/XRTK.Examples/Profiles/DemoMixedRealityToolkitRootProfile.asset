@@ -24,7 +24,7 @@ MonoBehaviour:
   enableBoundarySystem: 1
   boundarySystemType:
     reference: fe458876-cc0f-4b6f-9459-544ddf6a9263
-  boundaryVisualizationProfile: {fileID: 11400000, guid: ef4d986bb3f8e164781a88b8d4b1cf94,
+  boundarySystemProfile: {fileID: 11400000, guid: ef4d986bb3f8e164781a88b8d4b1cf94,
     type: 2}
   enableTeleportSystem: 1
   teleportSystemType:
