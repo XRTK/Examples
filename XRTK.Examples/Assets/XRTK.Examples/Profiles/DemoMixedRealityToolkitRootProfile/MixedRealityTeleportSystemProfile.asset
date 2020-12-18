@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MixedRealityTeleportSystemProfile
   m_EditorClassIdentifier: 
   configurations: []
-  teleportHandlerComponent:
+  teleportProvider:
     reference: 0db5b0fd-9ac3-487a-abfd-754963f4e2a3
