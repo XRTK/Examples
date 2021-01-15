@@ -2,7 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using XRTK.Definitions.SpatialAwarenessSystem;
-using XRTK.EventDatum.SpatialAwarenessSystem;
+using XRTK.EventDatum.SpatialAwareness;
 using XRTK.Interfaces.SpatialAwarenessSystem.Handlers;
 using XRTK.Services;
 using XRTK.Utilities.Async;
