@@ -1,13 +1,14 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) XRTK. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using System.Collections.Generic;
+using UnityEngine;
 using XRTK.Definitions.SpatialAwarenessSystem;
 using XRTK.EventDatum.SpatialAwarenessSystem;
+using XRTK.Interfaces.SpatialAwarenessSystem;
 using XRTK.Interfaces.SpatialAwarenessSystem.Handlers;
 using XRTK.Services;
 using XRTK.Utilities.Async;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace XRTK.Examples.Demos
 {
@@ -17,6 +18,11 @@ namespace XRTK.Examples.Demos
     /// </summary>
     public class DemoSpatialMeshHandler : MonoBehaviour, IMixedRealitySpatialAwarenessMeshHandler<SpatialMeshObject>
     {
+        private IMixedRealitySpatialAwarenessSystem spatialAwarenessSystem = null;
+
+        private IMixedRealitySpatialAwarenessSystem SpatialAwarenessSystem
+            => spatialAwarenessSystem ?? (spatialAwarenessSystem = MixedRealityToolkit.GetSystem<IMixedRealitySpatialAwarenessSystem>());
+
         /// <summary>
         /// Collection that tracks the IDs and count of updates for each active spatial awareness mesh.
         /// </summary>
@@ -24,13 +30,13 @@ namespace XRTK.Examples.Demos
 
         private async void OnEnable()
         {
-            await new WaitUntil(() => MixedRealityToolkit.SpatialAwarenessSystem != null);
-            MixedRealityToolkit.SpatialAwarenessSystem.Register(gameObject);
+            await new WaitUntil(() => SpatialAwarenessSystem != null);
+            SpatialAwarenessSystem.Register(gameObject);
         }
 
         private void OnDisable()
         {
-            MixedRealityToolkit.SpatialAwarenessSystem?.Unregister(gameObject);
+            SpatialAwarenessSystem?.Unregister(gameObject);
         }
 
         /// <inheritdoc />

@@ -7,6 +7,7 @@ using XRTK.Interfaces.InputSystem.Handlers;
 using XRTK.Services;
 using UnityEngine;
 using XRTK.Extensions;
+using XRTK.Interfaces.InputSystem;
 using XRTK.SDK.Utilities.Solvers;
 
 namespace XRTK.Examples.Demos
@@ -68,15 +69,17 @@ namespace XRTK.Examples.Demos
 
                 if (updateSolverTargetToClickSource && !solverHandler.IsNull())
                 {
-                    if (MixedRealityToolkit.InputSystem.TryGetController(eventData.InputSource, out var controller))
+                    if (MixedRealityToolkit.TryGetSystem<IMixedRealityInputSystem>(out var inputSystem) &&
+                        inputSystem.TryGetController(eventData.InputSource, out var controller))
                     {
-                        if (controller.ControllerHandedness == Handedness.Right)
+                        switch (controller.ControllerHandedness)
                         {
-                            solverHandler.TrackedObjectToReference = TrackedObjectType.RightHandOrController;
-                        }
-                        else if (controller.ControllerHandedness == Handedness.Left)
-                        {
-                            solverHandler.TrackedObjectToReference = TrackedObjectType.LeftHandOrController;
+                            case Handedness.Right:
+                                solverHandler.TrackedObjectToReference = TrackedObjectType.RightHandOrController;
+                                break;
+                            case Handedness.Left:
+                                solverHandler.TrackedObjectToReference = TrackedObjectType.LeftHandOrController;
+                                break;
                         }
                     }
                 }

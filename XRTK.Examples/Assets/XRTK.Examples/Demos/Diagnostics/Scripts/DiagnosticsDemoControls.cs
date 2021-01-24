@@ -3,6 +3,7 @@
 
 using System;
 using UnityEngine;
+using XRTK.Interfaces.DiagnosticsSystem;
 using XRTK.Services;
 using XRTK.Utilities.Async;
 
@@ -14,15 +15,18 @@ namespace XRTK.Examples.Demos
         {
             try
             {
-                await MixedRealityToolkit.DiagnosticsSystem.WaitUntil(system => system != null);
+                await MixedRealityToolkit.GetSystem<IMixedRealityDiagnosticsSystem>().WaitUntil(system => system != null);
             }
             catch (TimeoutException)
             {
-                Debug.LogWarning("Diagnostics system may be disabled. To run this demo, it needs to be enabled. Check your configuration settings.");
+                Debug.LogWarning($"The {nameof(IMixedRealityDiagnosticsSystem)} may be disabled. To run this demo, it needs to be enabled. Check your configuration settings.");
             }
 
             // Turn on the diagnostics for this demo.
-            MixedRealityToolkit.DiagnosticsSystem.IsWindowEnabled = true;
+            if (MixedRealityToolkit.TryGetSystem<IMixedRealityDiagnosticsSystem>(out var diagnosticsSystem))
+            {
+                diagnosticsSystem.IsWindowEnabled = true;
+            }
         }
     }
 }
