@@ -163,6 +163,7 @@ MonoBehaviour:
   drawDebugPointingRays: 1
   debugPointingRayColors:
   - {r: 0, g: 1, b: 0, a: 1}
+  gripThreshold: 0.8
   renderingMode: 1
   handPhysicsEnabled: 0
   useTriggers: 0
