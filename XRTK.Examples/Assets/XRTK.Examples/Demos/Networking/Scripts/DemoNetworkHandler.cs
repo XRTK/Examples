@@ -1,21 +1,37 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) XRTK. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using XRTK.EventDatum.Networking;
 using XRTK.Interfaces.NetworkingSystem.Handlers;
 using XRTK.Services;
 using UnityEngine;
+using XRTK.Interfaces.NetworkingSystem;
 
 public class DemoNetworkHandler : MonoBehaviour,
     IMixedRealityNetworkingHandler<float>,
     IMixedRealityNetworkingHandler<string>
 {
-    void Start()
+    private IMixedRealityNetworkingSystem networkingSystem;
+
+    private IMixedRealityNetworkingSystem NetworkingSystem
     {
-        MixedRealityToolkit.NetworkingSystem.Register(gameObject);
-        MixedRealityToolkit.NetworkingSystem.SendData("Hi");
-        MixedRealityToolkit.NetworkingSystem.SendData(5f);
-        MixedRealityToolkit.NetworkingSystem.SendData(Vector3.zero);
+        get
+        {
+            if (networkingSystem == null)
+            {
+                MixedRealityToolkit.TryGetSystem<IMixedRealityNetworkingSystem>(out networkingSystem);
+            }
+
+            return networkingSystem;
+        }
+    }
+
+    private void Start()
+    {
+        NetworkingSystem.Register(gameObject);
+        NetworkingSystem.SendData("Hi");
+        NetworkingSystem.SendData(5f);
+        NetworkingSystem.SendData(Vector3.zero);
     }
 
     /// <inheritdoc />

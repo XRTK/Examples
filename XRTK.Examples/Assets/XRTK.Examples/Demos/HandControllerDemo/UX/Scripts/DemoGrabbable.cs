@@ -5,6 +5,7 @@ using UnityEngine;
 using XRTK.Definitions.InputSystem;
 using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
+using XRTK.Interfaces.InputSystem;
 using XRTK.Interfaces.InputSystem.Handlers;
 using XRTK.SDK.Input.Handlers;
 using XRTK.Services;
@@ -98,10 +99,9 @@ namespace XRTK.Examples.Demos.HandController.UX
                 isGripped = true;
                 gripHandedness = eventData.Handedness;
 
-                if (MixedRealityToolkit.IsInitialized &&
-                MixedRealityToolkit.InputSystem != null)
+                if (MixedRealityToolkit.TryGetSystem<IMixedRealityInputSystem>(out var inputSystem))
                 {
-                    MixedRealityToolkit.InputSystem.Register(gameObject);
+                    inputSystem.Register(gameObject);
                 }
 
                 lerpTime = 0f;
@@ -119,7 +119,12 @@ namespace XRTK.Examples.Demos.HandController.UX
             if (eventData.MixedRealityInputAction == grabAction)
             {
                 isGripped = false;
-                MixedRealityToolkit.InputSystem?.Unregister(gameObject);
+
+                if (MixedRealityToolkit.TryGetSystem<IMixedRealityInputSystem>(out var inputSystem))
+                {
+                    inputSystem.Unregister(gameObject);
+                }
+
                 eventData.Use();
 
                 lerpTime = 0f;

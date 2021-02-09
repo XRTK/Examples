@@ -2,6 +2,7 @@
 using XRTK.Definitions.InputSystem;
 using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
+using XRTK.Interfaces.InputSystem;
 using XRTK.Interfaces.InputSystem.Handlers;
 using XRTK.SDK.Input.Handlers;
 using XRTK.Services;
@@ -47,7 +48,7 @@ namespace XRTK.Examples.Demos.Input
             base.OnEnable();
 
             Debug.Log($"[OnEnable] Is XRTK initialized? {MixedRealityToolkit.Instance != null}");
-            Debug.Log($"[OnEnable] Is Input System initialized? {MixedRealityToolkit.InputSystem != null}");
+            Debug.Log($"[OnEnable] Is Input System initialized? {InputSystem != null}");
         }
 
         protected override void Start()
@@ -55,11 +56,11 @@ namespace XRTK.Examples.Demos.Input
             base.Start();
 
             Debug.Log($"[Start] Is XRTK initialized? {MixedRealityToolkit.Instance != null}");
-            Debug.Log($"[Start] Is Input System initialized? {MixedRealityToolkit.InputSystem != null}");
+            Debug.Log($"[Start] Is Input System initialized? {InputSystem != null}");
 
-            if (MixedRealityToolkit.InputSystem != null)
+            if (InputSystem != null)
             {
-                foreach (var inputSource in MixedRealityToolkit.InputSystem.DetectedInputSources)
+                foreach (var inputSource in InputSystem.DetectedInputSources)
                 {
                     Debug.Log($"[OnSourceDetected] {inputSource.SourceName}");
                 }

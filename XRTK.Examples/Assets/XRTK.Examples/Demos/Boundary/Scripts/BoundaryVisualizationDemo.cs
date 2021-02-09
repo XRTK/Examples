@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using XRTK.Definitions.BoundarySystem;
+using XRTK.Interfaces.BoundarySystem;
+using XRTK.Interfaces.CameraSystem;
 using XRTK.Services;
 using XRTK.Utilities.Async;
 
@@ -30,17 +32,26 @@ namespace XRTK.Examples.Demos.BoundarySystem
         [SerializeField]
         private bool showBoundaryCeiling = true;
 
+        private IMixedRealityBoundarySystem boundarySystem = null;
+
+        private IMixedRealityBoundarySystem BoundarySystem
+            => boundarySystem ?? (boundarySystem = MixedRealityToolkit.GetSystem<IMixedRealityBoundarySystem>());
+
         #region MonoBehaviour Implementation
 
         private void Awake()
         {
             markerParent = new GameObject("Boundary Demo Markers");
-            markerParent.transform.parent = MixedRealityToolkit.CameraSystem.MainCameraRig.PlayspaceTransform;
+
+            if (MixedRealityToolkit.TryGetSystem<IMixedRealityCameraSystem>(out var cameraSystem))
+            {
+                markerParent.transform.parent = cameraSystem.MainCameraRig.PlayspaceTransform;
+            }
         }
 
         private void Start()
         {
-            if (MixedRealityToolkit.BoundarySystem != null)
+            if (BoundarySystem != null)
             {
                 if (markers.Count == 0)
                 {
@@ -51,19 +62,30 @@ namespace XRTK.Examples.Demos.BoundarySystem
 
         private async void OnEnable()
         {
-            await new WaitUntil(() => MixedRealityToolkit.BoundarySystem != null);
-            MixedRealityToolkit.BoundarySystem.BoundaryProximityAlert += OnBoundaryProximityAlert;
-            MixedRealityToolkit.BoundarySystem.ShowBoundary = showBoundary;
-            MixedRealityToolkit.BoundarySystem.ShowFloor = showFloor;
-            MixedRealityToolkit.BoundarySystem.ShowWalls = showBoundaryWalls;
-            MixedRealityToolkit.BoundarySystem.ShowCeiling = showBoundaryCeiling;
+            try
+            {
+                await MixedRealityToolkit.GetSystem<IMixedRealityBoundarySystem>().WaitUntil(system => system != null);
+            }
+            catch (TimeoutException)
+            {
+                Debug.LogWarning($"The {nameof(IMixedRealityBoundarySystem)} may be disabled. To run this demo, it needs to be enabled. Check your configuration settings.");
+            }
+
+            if (BoundarySystem != null)
+            {
+                BoundarySystem.BoundaryProximityAlert += OnBoundaryProximityAlert;
+                BoundarySystem.ShowBoundary = showBoundary;
+                BoundarySystem.ShowFloor = showFloor;
+                BoundarySystem.ShowWalls = showBoundaryWalls;
+                BoundarySystem.ShowCeiling = showBoundaryCeiling;
+            }
         }
 
         private void OnDisable()
         {
-            if (MixedRealityToolkit.BoundarySystem != null)
+            if (BoundarySystem != null)
             {
-                MixedRealityToolkit.BoundarySystem.BoundaryProximityAlert -= OnBoundaryProximityAlert;
+                BoundarySystem.BoundaryProximityAlert -= OnBoundaryProximityAlert;
             }
         }
 
@@ -98,7 +120,7 @@ namespace XRTK.Examples.Demos.BoundarySystem
         {
             // Get the rectangular bounds.
 
-            if (!MixedRealityToolkit.BoundarySystem.TryGetRectangularBoundsParams(out var centerRect, out var angleRect, out var widthRect, out var heightRect))
+            if (!BoundarySystem.TryGetRectangularBoundsParams(out var centerRect, out var angleRect, out var widthRect, out var heightRect))
             {
                 // If we have no boundary manager or rectangular bounds we will show no indicators
                 return;
@@ -121,7 +143,7 @@ namespace XRTK.Examples.Demos.BoundarySystem
                     var offset = new Vector3(xIndex * indicatorDistance, 0.0f, yIndex * indicatorDistance);
                     var position = corner + offset;
 
-                    if (MixedRealityToolkit.BoundarySystem.IsInsideBoundary(position))
+                    if (BoundarySystem.IsInsideBoundary(position))
                     {
                         var marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                         marker.name = "Boundary Demo Marker";
