@@ -1,9 +1,11 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) XRTK. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using System;
+using UnityEngine;
+using XRTK.Interfaces.DiagnosticsSystem;
 using XRTK.Services;
 using XRTK.Utilities.Async;
-using UnityEngine;
 
 namespace XRTK.Examples.Demos
 {
@@ -11,16 +13,20 @@ namespace XRTK.Examples.Demos
     {
         private async void Start()
         {
-            if (!MixedRealityToolkit.Instance.ActiveProfile.IsDiagnosticsSystemEnabled)
+            try
             {
-                Debug.LogWarning("Diagnostics system is disabled. To run this demo, it needs to be enabled. Check your configuration settings.");
-                return;
+                await MixedRealityToolkit.GetSystem<IMixedRealityDiagnosticsSystem>().WaitUntil(system => system != null);
+            }
+            catch (TimeoutException)
+            {
+                Debug.LogWarning($"The {nameof(IMixedRealityDiagnosticsSystem)} may be disabled. To run this demo, it needs to be enabled. Check your configuration settings.");
             }
 
-            await MixedRealityToolkit.DiagnosticsSystem.WaitUntil(system => system != null);
-
             // Turn on the diagnostics for this demo.
-            MixedRealityToolkit.DiagnosticsSystem.IsWindowEnabled = true;
+            if (MixedRealityToolkit.TryGetSystem<IMixedRealityDiagnosticsSystem>(out var diagnosticsSystem))
+            {
+                diagnosticsSystem.IsWindowEnabled = true;
+            }
         }
     }
 }
