@@ -30,17 +30,17 @@ MonoBehaviour:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: 41481abd1e4d94e498f813c4e7e6d251, type: 2}
   - instancedType:
-      reference: 9453c088-285e-47aa-bfbb-dafd9109fdd5
-    name: Mixed Reality Locomotion System
+      reference: 2c18630a-9837-46fa-addf-6c8af34d4143
+    name: Mixed Reality Teleport System
     priority: 2
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: 27489e63105110d4b8c49b002dbab157, type: 2}
+    profile: {fileID: 11400000, guid: 59cd7501c7e80d54eb56045b4f20262c, type: 2}
   - instancedType:
       reference: 2044b5ae-8f50-4b66-b508-d8087356c140
     name: Mixed Reality Diagnostics System
-    priority: 3
+    priority: 4
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
@@ -48,7 +48,7 @@ MonoBehaviour:
   - instancedType:
       reference: fe458876-cc0f-4b6f-9459-544ddf6a9263
     name: Mixed Reality Boundary System
-    priority: 4
+    priority: 3
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422

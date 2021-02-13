@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: SymbolicLinkSettings
   m_EditorClassIdentifier: 
   symbolicLinks:
-  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.sdk@0.2.2/Profiles~
+  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.sdk@0.2.3/Profiles~
     targetRelativePath: /XRTK.Examples/Assets/XRTK.Generated/SDK/Profiles
     isActive: 1
-  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.sdk@0.2.2/Prefabs~
+  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.sdk@0.2.3/Prefabs~
     targetRelativePath: /XRTK.Examples/Assets/XRTK.Generated/SDK/Prefabs
     isActive: 1
-  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.wmr@0.2.2/Profiles~
-    targetRelativePath: /XRTK.Examples/Assets/XRTK.Generated/WindowsMixedReality/Profiles
+  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.lumin@0.2.3/Profiles~
+    targetRelativePath: /XRTK.Examples/Assets/XRTK.Generated/Lumin/Profiles
     isActive: 1
-  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.oculus@0.2.2/Profiles~
+  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.oculus@0.2.3/Profiles~
     targetRelativePath: /XRTK.Examples/Assets/XRTK.Generated/Oculus/Profiles
     isActive: 1
-  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.lumin@0.2.2/Profiles~
-    targetRelativePath: /XRTK.Examples/Assets/XRTK.Generated/Lumin/Profiles
+  - sourceRelativePath: /XRTK.Examples/Library/PackageCache/com.xrtk.wmr@0.2.4/Profiles~
+    targetRelativePath: /XRTK.Examples/Assets/XRTK.Generated/WindowsMixedReality/Profiles
     isActive: 1
