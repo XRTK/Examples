@@ -134,7 +134,7 @@
       "url": "https://packages.unity.com"
     },
     "com.xrtk.core": {
-      "version": "0.2.6-preview.1",
+      "version": "0.2.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -147,39 +147,39 @@
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.lumin": {
-      "version": "0.2.3-preview.1",
+      "version": "0.2.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.6-preview.1"
+        "com.xrtk.core": "0.2.6"
       },
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.oculus": {
-      "version": "0.2.3-preview.1",
+      "version": "0.2.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.6-preview.1"
+        "com.xrtk.core": "0.2.6"
       },
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.sdk": {
-      "version": "0.2.3-preview.1",
+      "version": "0.2.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.6-preview.1",
+        "com.xrtk.core": "0.2.6",
         "com.unity.textmeshpro": "2.1.3"
       },
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.wmr": {
-      "version": "0.2.4-preview.1",
+      "version": "0.2.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.6-preview.1",
+        "com.xrtk.core": "0.2.6",
         "com.unity.xr.windowsmr.metro": "4.2.3"
       },
       "url": "http://upm.xrtk.io:4873"
