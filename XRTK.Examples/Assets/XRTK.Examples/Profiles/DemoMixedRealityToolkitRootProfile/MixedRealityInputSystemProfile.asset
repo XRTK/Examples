@@ -119,7 +119,7 @@ MonoBehaviour:
   - instancedType:
       reference: 12e02ef8-4177-46ab-bc50-19af7148bd4a
     name: Windows Mixed Reality Controller Data Provider
-    priority: 10
+    priority: 9
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
@@ -141,7 +141,7 @@ MonoBehaviour:
   - instancedType:
       reference: 067ce7d4-8277-4e18-834e-3dc712074b72
     name: Mouse Data Provider
-    priority: 12
+    priority: 11
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
