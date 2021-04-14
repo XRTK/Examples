@@ -83,7 +83,7 @@ MonoBehaviour:
   - instancedType:
       reference: 0de5da40-feb8-4891-b9b2-942eafd041b9
     name: Oculus Controller Data Provider
-    priority: 5
+    priority: 6
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
@@ -122,13 +122,26 @@ MonoBehaviour:
     priority: 9
     platformEntries:
       runtimePlatforms:
-      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
+      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
     profile: {fileID: 11400000, guid: 8e0139954c0b0ab41a6f5fce7c0594e1, type: 2}
+  - instancedType:
+      reference: f2e0d0ef-6393-4f96-90cc-df78ca1dc8a2
+    name: Windows Mixed Reality Hand Controller Data Provider
+    priority: 11
+    platformEntries:
+      runtimePlatforms:
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
+      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
+    profile: {fileID: 11400000, guid: 11ef7a331fa0a164bb9ac3e5cae510ff, type: 2}
   - instancedType:
       reference: 067ce7d4-8277-4e18-834e-3dc712074b72
     name: Mouse Data Provider
-    priority: 10
+    priority: 11
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
