@@ -5,7 +5,7 @@ using UnityEditor;
 using XRTK.Editor.Profiles;
 using XRTK.Examples.Demos.CustomExtensionServices;
 
-namespace XRTK
+namespace XRTK.Examples.Demos.CustomServices.Editor
 {
     /// <summary>
     /// This class demonstrates how to expose serialized fields into custom service profiles.
@@ -17,7 +17,7 @@ namespace XRTK
 
         protected override void OnEnable()
         {
-            // Initiaize the base class properites.
+            // Initialize the base class properties
             base.OnEnable();
 
             myCustomStringData = serializedObject.FindProperty(nameof(myCustomStringData));
