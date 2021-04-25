@@ -8,7 +8,9 @@ resources:
       endpoint: XRTK
 
 variables:
-  project.name: ''
+  project.name: 'Examples'
+  package.name: ''
+  package.version: ''
   EditorPath: ''
   LogDirectory: ''
   ${{ if eq( variables['build.reason'], 'PullRequest' ) }}:
