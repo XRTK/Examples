@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d420c170b42dfe0438e2aa2a829775ed, type: 3}
+  m_Name: LeftLuminMixedRealityHandControllerProfile
+  m_EditorClassIdentifier: 
+  controllerType:
+    reference: b18a9a6c-e5fd-40ae-89e9-9822415ec62b
+  handedness: 1
+  visualizationProfile: {fileID: 11400000, guid: 8e23bee118edd1c4eb3a535dbb2851a5,
+    type: 2}
+  useCustomInteractions: 0
+  interactionMappingProfiles:
+  - {fileID: 11400000, guid: 2b754d868d59ea344a5aeb3b461beb92, type: 2}
+  - {fileID: 11400000, guid: a67d0216b0e4e0b429e8b6797010bca8, type: 2}
+  - {fileID: 11400000, guid: 8bb52bd1228582d44a127f853a6bc25b, type: 2}
+  - {fileID: 11400000, guid: 7071ed7a23f6b0b4ebc58478a20c73a1, type: 2}
+  - {fileID: 11400000, guid: 75c20d9944697174280d635af4953def, type: 2}
+  - {fileID: 11400000, guid: f6c6766b14003374bb38c0e0fabb1125, type: 2}
