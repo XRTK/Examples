@@ -9,7 +9,7 @@ resources:
       ref: dev/non-package-build-support
 
 variables:
-  project.name: 'Examples'
+  project.name: 'XRTK.Examples'
   package.name: ''
   package.version: ''
   EditorPath: ''
