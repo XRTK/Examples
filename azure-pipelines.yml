@@ -46,7 +46,6 @@ trigger:
     include:
       - azure-pipelines.yml
       - XRTK.Examples/*
-      - Submodules/*
     exclude:
       - '*'
 
