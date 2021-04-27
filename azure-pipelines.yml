@@ -6,7 +6,6 @@ resources:
       type: github
       name: XRTK/AzurePipelines
       endpoint: XRTK
-      ref: dev/non-package-build-support
 
 variables:
   project.name: 'XRTK.Examples'
