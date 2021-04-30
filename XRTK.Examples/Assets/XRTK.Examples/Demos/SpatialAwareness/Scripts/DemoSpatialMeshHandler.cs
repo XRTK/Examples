@@ -1,6 +1,7 @@
 ﻿// Copyright (c) XRTK. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using XRTK.Definitions.SpatialAwarenessSystem;
@@ -26,7 +27,7 @@ namespace XRTK.Examples.Demos
         /// <summary>
         /// Collection that tracks the IDs and count of updates for each active spatial awareness mesh.
         /// </summary>
-        private readonly Dictionary<int, uint> meshUpdateData = new Dictionary<int, uint>();
+        private readonly Dictionary<Guid, uint> meshUpdateData = new Dictionary<Guid, uint>();
 
         private async void OnEnable()
         {
