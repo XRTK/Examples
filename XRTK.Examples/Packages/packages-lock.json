@@ -137,7 +137,7 @@
       "url": "https://packages.unity.com"
     },
     "com.xrtk.core": {
-      "version": "0.2.13-preview.3",
+      "version": "0.2.13",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -159,11 +159,11 @@
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.lumin": {
-      "version": "0.2.6-preview.1",
+      "version": "0.2.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.13-preview.2"
+        "com.xrtk.core": "0.2.13"
       },
       "url": "http://upm.xrtk.io:4873"
     },
@@ -186,11 +186,11 @@
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.wmr": {
-      "version": "0.2.8-preview.1",
+      "version": "0.2.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.13-preview.2",
+        "com.xrtk.core": "0.2.13",
         "com.unity.xr.windowsmr.metro": "4.2.3"
       },
       "url": "http://upm.xrtk.io:4873"
