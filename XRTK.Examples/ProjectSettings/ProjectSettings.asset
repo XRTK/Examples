@@ -169,6 +169,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.xrtk.examples
+    Lumin: com.xrtk.examples
     Standalone: com.xrtk.examples
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -625,14 +626,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: XRTK.Examples
-  metroPackageVersion: 1.0.0.0
+  metroPackageName: com.xrtk.examples
+  metroPackageVersion: 0.2.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Template_3D
+  metroApplicationDescription: com.xrtk.examples
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -658,6 +659,7 @@ PlayerSettings:
       CodeGeneration: False
       Contacts: False
       EnterpriseAuthentication: False
+      GazeInput: False
       HumanInterfaceDevice: False
       InputInjectionBrokered: False
       InternetClient: False
