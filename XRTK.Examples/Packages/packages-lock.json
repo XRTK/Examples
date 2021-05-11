@@ -137,8 +137,8 @@
       "url": "https://packages.unity.com"
     },
     "com.xrtk.core": {
-      "version": "0.2.13",
-      "depth": 0,
+      "version": "0.2.14",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
@@ -150,47 +150,47 @@
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.gltf": {
-      "version": "0.2.2",
+      "version": "0.2.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.11"
+        "com.xrtk.core": "0.2.14"
       },
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.lumin": {
-      "version": "0.2.6",
+      "version": "0.2.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.13"
+        "com.xrtk.core": "0.2.14"
       },
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.oculus": {
-      "version": "0.2.5",
+      "version": "0.2.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.11"
+        "com.xrtk.core": "0.2.14"
       },
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.sdk": {
-      "version": "0.2.5",
+      "version": "0.2.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.11"
+        "com.xrtk.core": "0.2.14"
       },
       "url": "http://upm.xrtk.io:4873"
     },
     "com.xrtk.wmr": {
-      "version": "0.2.8",
+      "version": "0.2.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.xrtk.core": "0.2.13",
+        "com.xrtk.core": "0.2.14",
         "com.unity.xr.windowsmr.metro": "4.2.3"
       },
       "url": "http://upm.xrtk.io:4873"
