@@ -25,7 +25,7 @@ MonoBehaviour:
   - instancedType:
       reference: 8ef0cab5-a37c-4912-ad5e-1e57e92a314d
     name: Oculus Boundary Data Provider
-    priority: 3
+    priority: 0
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
