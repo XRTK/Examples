@@ -29,13 +29,9 @@ MonoBehaviour:
     id: 5
     description: Teleport Direction
     axisConstraint: 4
-  cancelTeleportAction:
-    profileGuid: 399335ccc89c4d12b79f3539ca7771db
-    id: 1
-    description: Select
-    axisConstraint: 2
+  movementCancelsTeleport: 1
   movementProvider:
-    reference: 
+    reference: ea92be29-4cab-4ae8-aee0-daf18a59656f
   moveAction:
     profileGuid: 399335ccc89c4d12b79f3539ca7771db
     id: 13
