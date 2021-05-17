@@ -53,5 +53,14 @@ MonoBehaviour:
       - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
     profile: {fileID: 11400000, guid: 57a7de86787ebb74ead8edbc180d4d14, type: 2}
+  - instancedType:
+      reference: ae391bc1-67b5-4074-9972-b401b0b9801c
+    name: WebXR Camera Data Provider
+    priority: 3
+    platformEntries:
+      runtimePlatforms:
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: 014aed5a-a0d8-4db3-a3c0-0b33ff7c065b
+    profile: {fileID: 11400000, guid: c8839a54625ef094ba03a2d5d1db8043, type: 2}
   globalCameraProfile: {fileID: 11400000, guid: c02516a14adf1ff45b2e6feaefd1d090,
     type: 2}
