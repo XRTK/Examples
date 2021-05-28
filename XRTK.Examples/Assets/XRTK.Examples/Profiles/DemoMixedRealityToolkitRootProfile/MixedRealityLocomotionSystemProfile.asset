@@ -21,7 +21,7 @@ MonoBehaviour:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: f3f7a928ca0f70649a77a0f17e7465ff, type: 2}
-  startupBehavior: 0
+  teleportStartupBehaviour: 0
   teleportProvider:
     reference: 0db5b0fd-9ac3-487a-abfd-754963f4e2a3
   teleportAction:
@@ -29,6 +29,7 @@ MonoBehaviour:
     id: 5
     description: Teleport Direction
     axisConstraint: 4
+  movementStartupBehaviour: 0
   movementCancelsTeleport: 1
   movementSpeed: 5
   movementProvider:
