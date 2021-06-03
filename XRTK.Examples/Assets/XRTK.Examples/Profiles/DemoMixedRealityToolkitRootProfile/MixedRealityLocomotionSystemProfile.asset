@@ -20,7 +20,7 @@ MonoBehaviour:
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: f3f7a928ca0f70649a77a0f17e7465ff, type: 2}
+    profile: {fileID: 11400000, guid: 94c8a2bcf62dc8a48b0689864b14ca4a, type: 2}
   - instancedType:
       reference: 1be53dfa-b8ae-4eb8-8459-17a5df87ade5
     name: Smooth Locomotion Data Provider
@@ -36,7 +36,7 @@ MonoBehaviour:
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: a4839393db7291b4c8cf3c0fe2d9ecda, type: 2}
+    profile: {fileID: 11400000, guid: bbd192ddedf8a4c4386bfe5035f1ed1d, type: 2}
   - instancedType:
       reference: b3156486-94f3-4a02-98a9-a1c26fbf92d8
     name: Dash Teleport Locomotion Data Provider
@@ -52,7 +52,7 @@ MonoBehaviour:
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 0}
+    profile: {fileID: 11400000, guid: f70f9eee032bf7742a1d370b7812b5e9, type: 2}
   teleportStartupBehaviour: 0
   teleportAction:
     profileGuid: 399335ccc89c4d12b79f3539ca7771db
