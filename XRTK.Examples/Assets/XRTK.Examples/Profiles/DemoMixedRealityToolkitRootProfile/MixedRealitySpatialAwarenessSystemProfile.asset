@@ -21,16 +21,16 @@ MonoBehaviour:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
       - reference: 39ebb366-21a7-4d08-9412-036b32976d0c
-    profile: {fileID: 0}
+    profile: {fileID: 11400000, guid: db549208d5968954b9d218ade6e0e79a, type: 2}
   - instancedType:
       reference: 0861c801-e20e-4e76-8c4e-711c1cb43ddf
     name: Windows Mixed Reality Spatial Mesh Observer
-    priority: 1
+    priority: 0
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
       - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
-    profile: {fileID: 0}
+    profile: {fileID: 11400000, guid: ccebe5391ffee2446ae581aacb2992a7, type: 2}
   meshDisplayOption: 1
   globalMeshObserverProfile: {fileID: 11400000, guid: 6cbcb6266beaa724780d064525cf2896,
     type: 2}
