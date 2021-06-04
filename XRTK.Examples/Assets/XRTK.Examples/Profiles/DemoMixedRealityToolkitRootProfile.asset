@@ -22,6 +22,14 @@ MonoBehaviour:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: 929bff407477a434c9168e944d0ff548, type: 2}
   - instancedType:
+      reference: 2044b5ae-8f50-4b66-b508-d8087356c140
+    name: Mixed Reality Diagnostics System
+    priority: 0
+    platformEntries:
+      runtimePlatforms:
+      - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
+    profile: {fileID: 11400000, guid: 67877e0533631384ebc5f7f70ca2060b, type: 2}
+  - instancedType:
       reference: 18c9caf0-8d36-4add-bb49-cdf7561cf793
     name: Mixed Reality Input System
     priority: 0
@@ -37,14 +45,6 @@ MonoBehaviour:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: 27489e63105110d4b8c49b002dbab157, type: 2}
-  - instancedType:
-      reference: 2044b5ae-8f50-4b66-b508-d8087356c140
-    name: Mixed Reality Diagnostics System
-    priority: 4
-    platformEntries:
-      runtimePlatforms:
-      - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: 67877e0533631384ebc5f7f70ca2060b, type: 2}
   - instancedType:
       reference: fe458876-cc0f-4b6f-9459-544ddf6a9263
     name: Mixed Reality Boundary System
