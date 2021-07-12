@@ -32,7 +32,7 @@ MonoBehaviour:
   - instancedType:
       reference: 18c9caf0-8d36-4add-bb49-cdf7561cf793
     name: Mixed Reality Input System
-    priority: 0
+    priority: 1
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
