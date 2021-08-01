@@ -12,7 +12,7 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
     /// The implementation of your <see cref="IDemoCustomExtensionService"/>
     /// </summary>
     [System.Runtime.InteropServices.Guid("C1E2FA5F-A0E2-42E2-8BF6-84AAEE76E91A")]
-    public class DemoCustomExtensionService : BaseExtensionService, IDemoCustomExtensionService
+    public class DemoCustomService : BaseSystem, IDemoCustomService
     {
         /// <summary>
         /// Constructor.
@@ -20,13 +20,13 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
         /// <param name="name"></param>
         /// <param name="priority"></param>
         /// <param name="profile"></param>
-        public DemoCustomExtensionService(string name, uint priority, DemoCustomExtensionServiceProfile profile)
-                : base(name, priority, profile)
+        public DemoCustomService(DemoCustomServiceProfile profile)
+                : base(profile)
         {
             // If your service requires the use of a configuration profile, be sure to check it here.
             if (profile.IsNull())
             {
-                throw new Exception($"{GetType().Name} expects a {nameof(DemoCustomExtensionServiceProfile)}");
+                throw new Exception($"{GetType().Name} expects a {nameof(DemoCustomServiceProfile)}");
             }
 
             // In the constructor, you should set any configuration data from your profile here.

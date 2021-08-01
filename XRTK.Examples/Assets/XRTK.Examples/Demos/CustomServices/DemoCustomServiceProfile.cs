@@ -3,6 +3,7 @@
 
 using XRTK.Definitions;
 using UnityEngine;
+using XRTK.Interfaces;
 
 namespace XRTK.Examples.Demos.CustomExtensionServices
 {
@@ -10,8 +11,8 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
     /// This is the custom configuration profile for your custom extension service.
     /// In this file you'll want to put as much customizable options into it for the application to consume at runtime.
     /// </summary>
-    [CreateAssetMenu(menuName = "Mixed Reality Toolkit/Demos/CustomExtensionServiceProfile", fileName = "DemoCustomExtensionServiceProfile", order = 99)]
-    public class DemoCustomExtensionServiceProfile : BaseMixedRealityExtensionServiceProfile
+    [CreateAssetMenu(menuName = "Mixed Reality Toolkit/Demos/CustomServiceProfile", fileName = "DemoCustomServiceProfile", order = 99)]
+    public class DemoCustomServiceProfile : BaseMixedRealityServiceProfile<IMixedRealityDataProvider>
     {
         [SerializeField]
         [Tooltip("The custom configuration data you want to use at runtime.")]

@@ -10,8 +10,8 @@ namespace XRTK.Examples.Demos.CustomServices.Editor
     /// <summary>
     /// This class demonstrates how to expose serialized fields into custom service profiles.
     /// </summary>
-    [CustomEditor(typeof(DemoCustomExtensionServiceProfile))]
-    public class DemoCustomExtensionServiceProfileInspector : MixedRealityRegisteredServiceProvidersProfileInspector
+    [CustomEditor(typeof(DemoCustomServiceProfile))]
+    public class DemoCustomExtensionServiceProfileInspector : MixedRealityServiceProfileInspector
     {
         private SerializedProperty myCustomStringData;
 

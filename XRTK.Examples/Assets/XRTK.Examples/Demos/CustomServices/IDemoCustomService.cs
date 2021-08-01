@@ -11,7 +11,7 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
     /// Only use property accessors in these to better control access to internals.
     /// This interface is the contract for others to use to make their own implementations if shared publicly.
     /// </summary>
-    public interface IDemoCustomExtensionService : IMixedRealityExtensionService
+    public interface IDemoCustomService : IMixedRealityService
     {
         /// <summary>
         /// A custom event.
