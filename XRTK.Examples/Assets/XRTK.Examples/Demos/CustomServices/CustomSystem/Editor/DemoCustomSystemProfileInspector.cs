@@ -3,15 +3,14 @@
 
 using UnityEditor;
 using XRTK.Editor.Profiles;
-using XRTK.Examples.Demos.CustomExtensionServices;
 
 namespace XRTK.Examples.Demos.CustomServices.Editor
 {
     /// <summary>
-    /// This class demonstrates how to expose serialized fields into custom service profiles.
+    /// This class demonstrates how to expose serialized fields into custom system profiles.
     /// </summary>
-    [CustomEditor(typeof(DemoCustomServiceProfile))]
-    public class DemoCustomExtensionServiceProfileInspector : MixedRealityServiceProfileInspector
+    [CustomEditor(typeof(DemoCustomSystemProfile))]
+    public class DemoCustomSystemProfileInspector : MixedRealityServiceProfileInspector
     {
         private SerializedProperty myCustomStringData;
 

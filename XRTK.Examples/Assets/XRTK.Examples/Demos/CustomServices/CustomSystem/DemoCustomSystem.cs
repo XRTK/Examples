@@ -6,13 +6,13 @@ using UnityEngine;
 using XRTK.Extensions;
 using XRTK.Services;
 
-namespace XRTK.Examples.Demos.CustomExtensionServices
+namespace XRTK.Examples.Demos.CustomServices
 {
     /// <summary>
-    /// The implementation of your <see cref="IDemoCustomExtensionService"/>
+    /// The implementation of your <see cref="IDemoCustomSystem"/>
     /// </summary>
     [System.Runtime.InteropServices.Guid("C1E2FA5F-A0E2-42E2-8BF6-84AAEE76E91A")]
-    public class DemoCustomService : BaseSystem, IDemoCustomService
+    public class DemoCustomSystem : BaseSystem, IDemoCustomSystem
     {
         /// <summary>
         /// Constructor.
@@ -20,13 +20,13 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
         /// <param name="name"></param>
         /// <param name="priority"></param>
         /// <param name="profile"></param>
-        public DemoCustomService(DemoCustomServiceProfile profile)
+        public DemoCustomSystem(DemoCustomSystemProfile profile)
                 : base(profile)
         {
             // If your service requires the use of a configuration profile, be sure to check it here.
             if (profile.IsNull())
             {
-                throw new Exception($"{GetType().Name} expects a {nameof(DemoCustomServiceProfile)}");
+                throw new Exception($"{GetType().Name} expects a {nameof(DemoCustomSystemProfile)}");
             }
 
             // In the constructor, you should set any configuration data from your profile here.
@@ -46,7 +46,7 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
 
         #endregion IMixedRealityService Implementation
 
-        #region IDemoCustomExtensionService Implementation
+        #region IDemoCustomSystem Implementation
 
         /// <inheritdoc />
         public Action MyCustomEvent { get; set; }
@@ -73,6 +73,6 @@ namespace XRTK.Examples.Demos.CustomExtensionServices
             Debug.Log($"Called {nameof(MyCustomMethod)}");
         }
 
-        #endregion IDemoCustomExtensionService Implementation
+        #endregion IDemoCustomSyst3m Implementation
     }
 }

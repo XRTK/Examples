@@ -4,10 +4,10 @@
 using System;
 using XRTK.Interfaces;
 
-namespace XRTK.Examples.Demos.CustomExtensionServices
+namespace XRTK.Examples.Demos.CustomServices
 {
     /// <summary>
-    /// The custom interface for your extension service.
+    /// The custom interface for your custom service.
     /// Only use property accessors in these to better control access to internals.
     /// This interface is the contract for others to use to make their own implementations if shared publicly.
     /// </summary>
