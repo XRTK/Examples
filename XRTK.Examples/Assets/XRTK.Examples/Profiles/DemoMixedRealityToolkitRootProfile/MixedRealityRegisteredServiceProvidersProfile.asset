@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c48e65a9914a9ab61b891d9b405064, type: 3}
   m_Name: MixedRealityRegisteredServiceProvidersProfile
   m_EditorClassIdentifier: 
-  configurations: []
+  configurations:
+  - instancedType:
+      reference: debb0828-15a9-44e8-a884-f05b2d875675
+    name: Demo Custom Service
+    priority: 0
+    platformEntries:
+      runtimePlatforms:
+      - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
+    profile: {fileID: 0}
