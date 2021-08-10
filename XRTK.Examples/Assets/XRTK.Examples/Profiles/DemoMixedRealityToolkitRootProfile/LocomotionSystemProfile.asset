@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09eb879d2490c18478de9670542e9c74, type: 3}
-  m_Name: MixedRealityLocomotionSystemProfile
+  m_Name: LocomotionSystemProfile
   m_EditorClassIdentifier: 
   configurations:
   - instancedType:
@@ -30,21 +30,21 @@ MonoBehaviour:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: afbaf6cc7c17ee64c9681f5e02283ad5, type: 2}
   - instancedType:
-      reference: 497d2054-a467-4d6d-9d79-bd01aa6b4c22
-    name: Blink Teleport Locomotion Data Provider
+      reference: b3156486-94f3-4a02-98a9-a1c26fbf92d8
+    name: Dash Teleport Locomotion Data Provider
     priority: 1
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: bbd192ddedf8a4c4386bfe5035f1ed1d, type: 2}
+    profile: {fileID: 11400000, guid: de2b5c4133cc8a6469434b0924a876c8, type: 2}
   - instancedType:
-      reference: b3156486-94f3-4a02-98a9-a1c26fbf92d8
-    name: Dash Teleport Locomotion Data Provider
+      reference: 497d2054-a467-4d6d-9d79-bd01aa6b4c22
+    name: Blink Teleport Locomotion Data Provider
     priority: 2
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: de2b5c4133cc8a6469434b0924a876c8, type: 2}
+    profile: {fileID: 11400000, guid: bbd192ddedf8a4c4386bfe5035f1ed1d, type: 2}
   - instancedType:
       reference: 790cdfd8-89c7-41c9-8dab-6b32e1e9d0a9
     name: Instant Teleport Locomotion Data Provider
@@ -52,7 +52,7 @@ MonoBehaviour:
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: 1fb5d45a7a3a09344a4d3e392ca3cd31, type: 2}
+    profile: {fileID: 11400000, guid: 5d2262be3279f8a4d9e12658f61a3225, type: 2}
   - instancedType:
       reference: e6a350da-0953-44f7-b02f-8697c0c7e201
     name: Transform Path On Rails Locomotion Provider
@@ -61,4 +61,4 @@ MonoBehaviour:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: 9cf5acc38f5d8454e9c2deca29b2e417, type: 2}
-  teleportCooldown: 1
+  teleportCooldown: 0
