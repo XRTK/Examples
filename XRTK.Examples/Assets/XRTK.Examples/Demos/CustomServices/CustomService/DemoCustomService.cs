@@ -7,18 +7,16 @@ using XRTK.Services;
 
 namespace XRTK.Examples.Demos.CustomServices
 {
-    /// <summary>
-    /// The implementation of your <see cref="IDemoCustomSystem"/>
-    /// </summary>
-    [System.Runtime.InteropServices.Guid("debb0828-15a9-44e8-a884-f05b2d875675")]
-    public class DemoCustomService : BaseService, IDemoCustomService
+    [System.Runtime.InteropServices.Guid("07eed32a-3eaf-4700-ad6b-31e761074a74")]
+    public class DemoCustomService : BaseServiceWithConstructor, IDemoCustomService
     {
         /// <summary>
-        /// Constructor.
+        /// The implementation of your <see cref="IDemoCustomService"/>
         /// </summary>
-        public DemoCustomService()
-            : base()
-        { }
+        public DemoCustomService(string name, uint priority, DemoCustomServiceProfile profile)
+            : base(name, priority)
+        {
+        }
 
         #region IDemoCustomService Implementation
 

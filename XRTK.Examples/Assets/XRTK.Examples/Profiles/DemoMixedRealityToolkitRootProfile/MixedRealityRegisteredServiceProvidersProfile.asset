@@ -14,8 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   configurations:
   - instancedType:
-      reference: debb0828-15a9-44e8-a884-f05b2d875675
-    name: Demo Custom Service
+      reference: 07eed32a-3eaf-4700-ad6b-31e761074a74
+    name: Demo Service 1
+    priority: 0
+    platformEntries:
+      runtimePlatforms:
+      - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
+    profile: {fileID: 0}
+  - instancedType:
+      reference: 07eed32a-3eaf-4700-ad6b-31e761074a74
+    name: Demo Service 2
     priority: 0
     platformEntries:
       runtimePlatforms:

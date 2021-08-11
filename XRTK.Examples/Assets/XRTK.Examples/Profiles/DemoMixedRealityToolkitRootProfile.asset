@@ -63,7 +63,7 @@ MonoBehaviour:
     profile: {fileID: 11400000, guid: 01e8a649515c74148a68d9acfe3f4b73, type: 2}
   - instancedType:
       reference: c1e2fa5f-a0e2-42e2-8bf6-84aaee76e91a
-    name: Demo Custom Service
+    name: Demo Custom System
     priority: 5
     platformEntries:
       runtimePlatforms:
