@@ -3,12 +3,13 @@
 
 using System;
 using UnityEngine;
+using XRTK.Interfaces;
 using XRTK.Services;
 
 namespace XRTK.Examples.Demos.CustomServices
 {
     [System.Runtime.InteropServices.Guid("07eed32a-3eaf-4700-ad6b-31e761074a74")]
-    public class DemoCustomService : BaseServiceWithConstructor, IDemoCustomService
+    public class DemoCustomService : BaseServiceWithConstructor, IMixedRealityService
     {
         /// <summary>
         /// The implementation of your <see cref="IDemoCustomService"/>
