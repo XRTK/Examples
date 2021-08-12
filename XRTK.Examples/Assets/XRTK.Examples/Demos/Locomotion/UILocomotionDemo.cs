@@ -4,6 +4,7 @@
 using UnityEngine;
 using XRTK.Interfaces.LocomotionSystem;
 using XRTK.Services;
+using XRTK.Utilities;
 
 namespace XRTK.Examples.Demos.Locomotion
 {
@@ -20,6 +21,15 @@ namespace XRTK.Examples.Demos.Locomotion
             {
                 Debug.LogError($"Locomotion system not found. The locomotion demo requires the locomotion system to be enabled.");
             }
+        }
+
+        private void Update()
+        {
+            var rotation = Quaternion.LookRotation((transform.position - CameraCache.Main.transform.position).normalized, transform.up).eulerAngles;
+            rotation.x = 0f;
+            rotation.z = 0f;
+
+            transform.eulerAngles = rotation;
         }
 
         /// <summary>
