@@ -2,6 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
+using XRTK.Examples.ExamplesHub.Interfaces;
 using XRTK.Interfaces.LocomotionSystem;
 using XRTK.Services;
 using XRTK.Utilities;
@@ -57,6 +58,17 @@ namespace XRTK.Examples.Demos.Locomotion
         public void InstantTeleport_OnClick()
         {
             locomotionSystem.EnableLocomotionProvider<Providers.LocomotionSystem.InstantTeleportLocomotionProvider>();
+        }
+
+        /// <summary>
+        /// Exits the locomotion demo scene.
+        /// </summary>
+        public void ExitDemo_OnClick()
+        {
+            if (MixedRealityToolkit.TryGetSystem<IExamplesHubSystem>(out var examplesHubSystem))
+            {
+                examplesHubSystem.ExitExample();
+            }
         }
     }
 }
