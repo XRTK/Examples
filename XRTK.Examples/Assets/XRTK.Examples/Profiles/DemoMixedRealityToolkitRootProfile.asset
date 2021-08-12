@@ -61,5 +61,13 @@ MonoBehaviour:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: 01e8a649515c74148a68d9acfe3f4b73, type: 2}
+  - instancedType:
+      reference: 6191eb65-ec4c-434a-9a43-939fbc398582
+    name: Examples Hub System
+    priority: 5
+    platformEntries:
+      runtimePlatforms:
+      - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
+    profile: {fileID: 11400000, guid: db0cf88aa415d694aa69c874ac97b854, type: 2}
   registeredServiceProvidersProfile: {fileID: 11400000, guid: 511ad0cf7c4894a4b871c18a457f96f8,
     type: 2}

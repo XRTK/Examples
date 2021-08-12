@@ -65,10 +65,13 @@ namespace XRTK.Examples.Demos.Locomotion
         /// </summary>
         public void ExitDemo_OnClick()
         {
-            if (MixedRealityToolkit.TryGetSystem<IExamplesHubSystem>(out var examplesHubSystem))
+            if (!MixedRealityToolkit.TryGetSystem<IExamplesHubSystem>(out var examplesHubSystem))
             {
-                examplesHubSystem.ExitExample();
+                Debug.LogError($"Examples hub system not found, failed to exit example.");
+                return;
             }
+
+            examplesHubSystem.ExitExample();
         }
     }
 }
