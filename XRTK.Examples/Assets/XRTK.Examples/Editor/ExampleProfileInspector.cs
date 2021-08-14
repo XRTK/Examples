@@ -16,6 +16,8 @@ namespace XRTK.Examples.Editor
         private SerializedProperty sceneName;
         private SerializedProperty docsUrl;
         private SerializedProperty platformEntries;
+        private SerializedProperty worksWithTransparentDisplay;
+        private SerializedProperty worksWithOpaqueDisplay;
 
         protected override void OnEnable()
         {
@@ -26,6 +28,8 @@ namespace XRTK.Examples.Editor
             sceneName = serializedObject.FindProperty(nameof(sceneName));
             docsUrl = serializedObject.FindProperty(nameof(docsUrl));
             platformEntries = serializedObject.FindProperty(nameof(platformEntries));
+            worksWithTransparentDisplay = serializedObject.FindProperty(nameof(worksWithTransparentDisplay));
+            worksWithOpaqueDisplay = serializedObject.FindProperty(nameof(worksWithOpaqueDisplay));
         }
 
         public override void OnInspectorGUI()
@@ -44,6 +48,8 @@ namespace XRTK.Examples.Editor
             EditorGUILayout.PropertyField(sceneName);
             EditorGUILayout.PropertyField(docsUrl);
             EditorGUILayout.PropertyField(platformEntries);
+            EditorGUILayout.PropertyField(worksWithTransparentDisplay);
+            EditorGUILayout.PropertyField(worksWithOpaqueDisplay);
 
             serializedObject.ApplyModifiedProperties();
         }

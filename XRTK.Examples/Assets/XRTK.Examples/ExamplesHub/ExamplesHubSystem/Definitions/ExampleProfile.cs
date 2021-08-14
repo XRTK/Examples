@@ -101,5 +101,31 @@ namespace XRTK.Examples.ExamplesHub.Definitions
                 return runtimePlatforms;
             }
         }
+
+        [SerializeField]
+        [Tooltip("Does this example work with transparent displays?")]
+        private bool worksWithTransparentDisplay = true;
+
+        /// <summary>
+        /// Does this example work with transparent displays?
+        /// </summary>
+        public bool WorksWithTransparentDisplay
+        {
+            get => worksWithTransparentDisplay;
+            internal set => worksWithTransparentDisplay = value;
+        }
+
+        [SerializeField]
+        [Tooltip("Does this example work with opaque displays?")]
+        private bool worksWithOpaqueDisplay = true;
+
+        /// <summary>
+        /// Does this example work with opaque displays?
+        /// </summary>
+        public bool WorksWithOpaqueDisplay
+        {
+            get => worksWithOpaqueDisplay;
+            internal set => worksWithOpaqueDisplay = value;
+        }
     }
 }

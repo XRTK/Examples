@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: LocomotionExampleProfile
   m_EditorClassIdentifier: 
   title: Locomotion
-  description: See XRTK's locomotion system feature in action and learn how to use
-    it. The locomotion system is responsible for moving the player in your experience.
+  description: 'See XRTK''s locomotion system feature in action and learn how to
+    use it. The locomotion system is responsible for moving the player in your experience.
+
+
+    Supported
+    Platforms:
+
+    - all XRTK platforms'
   sceneName: LocomotionDemo
   docsUrl: https://www.xrtk.io
   platformEntries:
     runtimePlatforms:
     - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
+  worksWithTransparentDisplay: 0
+  worksWithOpaqueDisplay: 1
