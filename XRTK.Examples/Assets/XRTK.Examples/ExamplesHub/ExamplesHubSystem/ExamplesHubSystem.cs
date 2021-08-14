@@ -22,10 +22,11 @@ namespace XRTK.Examples.ExamplesHub
             : base(profile)
         {
             uiPrefab = profile.UIPrefab;
-            Examples = profile.Examples;
+            allExamples = profile.Examples;
         }
 
         private readonly GameObject uiPrefab;
+        private readonly IReadOnlyList<ExampleProfile> allExamples;
         private Scene? currentExampleScene;
 
         /// <summary>
@@ -34,7 +35,7 @@ namespace XRTK.Examples.ExamplesHub
         private GameObject ExamplesUI { get; set; }
 
         /// <inheritdoc />
-        public IReadOnlyList<Example> Examples { get; }
+        public IReadOnlyList<ExampleProfile> SupportedExamples { get; private set; }
 
         /// <inheritdoc />
         public override void Initialize()
@@ -53,6 +54,23 @@ namespace XRTK.Examples.ExamplesHub
             {
                 return;
             }
+
+            // Filter for examples supported by the current platform.
+            var compatibleExamples = new List<ExampleProfile>();
+            for (var i = 0; i < allExamples.Count; i++)
+            {
+                var example = allExamples[i];
+                for (int j = 0; j < example.RuntimePlatforms.Count; j++)
+                {
+                    var platform = example.RuntimePlatforms[j];
+                    if (platform.IsAvailable)
+                    {
+                        compatibleExamples.Add(example);
+                        break;
+                    }
+                }
+            }
+            SupportedExamples = compatibleExamples;
 
             // Initialize examples hub UI and events.
             ExamplesUI = Object.Instantiate(uiPrefab);
@@ -73,7 +91,7 @@ namespace XRTK.Examples.ExamplesHub
         }
 
         /// <inheritdoc />
-        public void LoadExample(Example example)
+        public void LoadExample(ExampleProfile example)
         {
             ExamplesUI.SetActive(false);
             SceneManager.LoadSceneAsync(example.SceneName, LoadSceneMode.Additive);

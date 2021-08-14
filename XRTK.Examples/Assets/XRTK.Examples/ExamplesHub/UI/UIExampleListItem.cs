@@ -2,6 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
+using XRTK.Examples.ExamplesHub.Definitions;
 
 namespace XRTK.Examples.ExamplesHub.UI
 {
@@ -16,18 +17,18 @@ namespace XRTK.Examples.ExamplesHub.UI
         /// <summary>
         /// Gets the <see cref="ExamplesHub.Example"/> item represented by this UI element.
         /// </summary>
-        public Example Example { get; private set; }
+        public ExampleProfile Example { get; private set; }
 
         /// <summary>
         /// Initializes the list item.
         /// </summary>
         /// <param name="ui">Reference to the main UI controller.</param>
         /// <param name="example">The example to display using this item.</param>
-        public void Initialize(UIExamplesHub ui, Example example)
+        public void Initialize(UIExamplesHub ui, ExampleProfile example)
         {
             uiController = ui;
             Example = example;
-            titleText.text = example.Name;
+            titleText.text = example.Title;
         }
 
         /// <summary>

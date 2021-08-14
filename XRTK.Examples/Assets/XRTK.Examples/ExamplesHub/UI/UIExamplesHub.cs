@@ -44,7 +44,7 @@ namespace XRTK.Examples.ExamplesHub.UI
             }
 
             launchExampleButton.interactable = false;
-            var examples = examplesHubSystem.Examples;
+            var examples = examplesHubSystem.SupportedExamples;
             for (var i = 0; i < examples.Count; i++)
             {
                 var listItem = Instantiate(exampleListItemPrefab).GetComponent<UIExampleListItem>();

@@ -16,11 +16,5 @@ MonoBehaviour:
   uiPrefab: {fileID: 1805258535757621282, guid: 81c69ae1a4838464c9f32c6592ed35e2,
     type: 3}
   examples:
-  - name: Locomotion
-    description: This example scene showcases the XRTK Locomotion Sysetm and how
-      to use it. Learn how to perform teleportation and smooth locomotion.
-    sceneName: LocomotionDemo
-  - name: Hand Tracking
-    description: See XRTK's hand controller in action and learn how to interact with
-      elements using your hands.
-    sceneName: HandControllerDemo
+  - {fileID: 11400000, guid: ba3186c4d2e6e704f93d9d64de7e8899, type: 2}
+  - {fileID: 11400000, guid: d5ae1c1989add504e8b3055b5b5e31a4, type: 2}

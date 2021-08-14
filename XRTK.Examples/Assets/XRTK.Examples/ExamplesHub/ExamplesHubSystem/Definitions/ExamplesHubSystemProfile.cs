@@ -29,12 +29,12 @@ namespace XRTK.Examples.ExamplesHub.Definitions
 
         [SerializeField]
         [Tooltip("Examples available to the examples hub application.")]
-        private List<Example> examples = null;
+        private List<ExampleProfile> examples = null;
 
         /// <summary>
         /// Examples available to the examples hub application.
         /// </summary>
-        public List<Example> Examples
+        public List<ExampleProfile> Examples
         {
             get => examples;
             internal set => examples = value;
