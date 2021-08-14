@@ -18,5 +18,9 @@ MonoBehaviour:
   examples:
   - name: Locomotion
     description: This example scene showcases the XRTK Locomotion Sysetm and how
-      to use it.
+      to use it. Learn how to perform teleportation and smooth locomotion.
     sceneName: LocomotionDemo
+  - name: Hand Tracking
+    description: See XRTK's hand controller in action and learn how to interact with
+      elements using your hands.
+    sceneName: HandControllerDemo

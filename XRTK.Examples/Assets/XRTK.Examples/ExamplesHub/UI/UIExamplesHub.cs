@@ -2,8 +2,10 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
+using UnityEngine.UI;
 using XRTK.Attributes;
 using XRTK.Examples.ExamplesHub.Interfaces;
+using XRTK.Extensions;
 using XRTK.Services;
 
 namespace XRTK.Examples.ExamplesHub.UI
@@ -22,11 +24,16 @@ namespace XRTK.Examples.ExamplesHub.UI
         private Transform scrollViewContent = null;
 
         [SerializeField]
+        [Tooltip("Reference to the example launch button.")]
+        private Button launchExampleButton = null;
+
+        [SerializeField]
         [Prefab]
         [Tooltip("Examples list item prefab.")]
         private GameObject exampleListItemPrefab = null;
 
         private IExamplesHubSystem examplesHubSystem;
+        private UIExampleListItem selectedExample;
 
         private void Start()
         {
@@ -36,6 +43,7 @@ namespace XRTK.Examples.ExamplesHub.UI
                 return;
             }
 
+            launchExampleButton.interactable = false;
             var examples = examplesHubSystem.Examples;
             for (var i = 0; i < examples.Count; i++)
             {
@@ -45,14 +53,26 @@ namespace XRTK.Examples.ExamplesHub.UI
             }
         }
 
+        /// <summary>
+        /// An example was selected in the examples list view.
+        /// </summary>
+        /// <param name="item">The selected example item.</param>
         public void UIExampleListItem_Selected(UIExampleListItem item)
         {
-            examplesHubSystem.LoadExample(item.Example);
+            selectedExample = item;
+            launchExampleButton.interactable = true;
+            descriptionText.text = item.Example.Description;
         }
 
-        public void UIExampleListItem_Hover(UIExampleListItem item)
+        /// <summary>
+        /// Loads the currently selected example.
+        /// </summary>
+        public void LaunchExample_Click()
         {
-            descriptionText.text = item.Example.Description;
+            if (!selectedExample.IsNull())
+            {
+                examplesHubSystem.LoadExample(selectedExample.Example);
+            }
         }
     }
 }
