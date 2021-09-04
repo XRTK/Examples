@@ -68,3 +68,7 @@ ThirdParty.meta
 --Version/
 StreamingAssets/
 StreamingAssets.meta
+XRTK.Examples/Assets/Plugins.meta
+XRTK.Examples/Assets/Plugins/Lumin.meta
+XRTK.Examples/Assets/Plugins/Lumin/Editor
+XRTK.Examples/Assets/Plugins/Lumin/Editor.meta
