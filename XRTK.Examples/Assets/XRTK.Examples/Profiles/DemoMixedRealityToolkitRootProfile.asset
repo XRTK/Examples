@@ -38,13 +38,13 @@ MonoBehaviour:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: 41481abd1e4d94e498f813c4e7e6d251, type: 2}
   - instancedType:
-      reference: 2c18630a-9837-46fa-addf-6c8af34d4143
-    name: Mixed Reality Teleport System
+      reference: 9453c088-285e-47aa-bfbb-dafd9109fdd5
+    name: Locomotion System
     priority: 2
     platformEntries:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
-    profile: {fileID: 11400000, guid: 59cd7501c7e80d54eb56045b4f20262c, type: 2}
+    profile: {fileID: 11400000, guid: 27489e63105110d4b8c49b002dbab157, type: 2}
   - instancedType:
       reference: fe458876-cc0f-4b6f-9459-544ddf6a9263
     name: Mixed Reality Boundary System
@@ -61,5 +61,13 @@ MonoBehaviour:
       runtimePlatforms:
       - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
     profile: {fileID: 11400000, guid: 01e8a649515c74148a68d9acfe3f4b73, type: 2}
+  - instancedType:
+      reference: 6191eb65-ec4c-434a-9a43-939fbc398582
+    name: Examples Hub System
+    priority: 5
+    platformEntries:
+      runtimePlatforms:
+      - reference: c6bf6315-2e9c-4602-827d-2d4871d29422
+    profile: {fileID: 11400000, guid: db0cf88aa415d694aa69c874ac97b854, type: 2}
   registeredServiceProvidersProfile: {fileID: 11400000, guid: 511ad0cf7c4894a4b871c18a457f96f8,
     type: 2}
