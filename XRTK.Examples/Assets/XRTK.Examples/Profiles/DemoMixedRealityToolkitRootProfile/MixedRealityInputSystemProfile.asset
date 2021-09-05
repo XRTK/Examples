@@ -149,6 +149,15 @@ MonoBehaviour:
       - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
     profile: {fileID: 11400000, guid: a62185f884b144c47bc6ba7264177a01, type: 2}
+  - instancedType:
+      reference: 4fc04834-14f0-4dc6-b272-cbc0d1bc8964
+    name: WebXR Controller Data Provider
+    priority: 1
+    platformEntries:
+      runtimePlatforms:
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: 014aed5a-a0d8-4db3-a3c0-0b33ff7c065b
+    profile: {fileID: 11400000, guid: 4bcbb0936187daf45a35c51ab9a36fc8, type: 2}
   focusProviderType:
     reference: 249d4d78-cadd-45ba-9438-db9fc2509213
   gazeProviderType:
