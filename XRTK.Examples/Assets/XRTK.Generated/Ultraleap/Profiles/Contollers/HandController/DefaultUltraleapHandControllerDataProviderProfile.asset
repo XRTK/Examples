@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451d8dc44d554ee4f87a12a362c3c649, type: 3}
+  m_Name: DefaultUltraleapHandControllerDataProviderProfile
+  m_EditorClassIdentifier: 
+  hasSetupDefaults: 1
+  controllerMappingProfiles:
+  - {fileID: 11400000, guid: 82448437b60bdd845a7af97a13cf5788, type: 2}
+  - {fileID: 11400000, guid: 3c6ad07a917966f42b0c37721b62501c, type: 2}
+  renderingMode: 1
+  handPhysicsEnabled: 0
+  useTriggers: 0
+  boundsMode: 0
+  trackedPoses: []
+  operationMode: 0
+  leapControllerOffset: {x: 0, y: -0.2, z: 0.3}
+  deviceOffsetMode: 0
+  deviceOffsetYAxis: 0
+  deviceOffsetZAxis: 0.12
+  deviceTiltXAxis: 5

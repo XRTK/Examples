@@ -52,4 +52,4 @@ MonoBehaviour:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
       - reference: 39ebb366-21a7-4d08-9412-036b32976d0c
-    profile: {fileID: 0}
+    profile: {fileID: 11400000, guid: db549208d5968954b9d218ade6e0e79a, type: 2}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da64fb88269149f8a95f1fb969d6a0b4, type: 3}
+  m_Name: UltraleapPlatformConfigurationsProfile
+  m_EditorClassIdentifier: 
+  platformEntries:
+    runtimePlatforms:
+    - reference: 58de2d2a-db5f-4090-a949-4028b8ea3afd
+    - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
+    - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+  configurations:
+  - instancedType:
+      reference: 61cec407-ffa4-4a5c-b96a-5229348f85c2
+    name: Ultraleap Hand Controller Data Provider
+    priority: 0
+    platformEntries:
+      runtimePlatforms:
+      - reference: 58de2d2a-db5f-4090-a949-4028b8ea3afd
+      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+    profile: {fileID: 11400000, guid: a62185f884b144c47bc6ba7264177a01, type: 2}

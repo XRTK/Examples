@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d420c170b42dfe0438e2aa2a829775ed, type: 3}
+  m_Name: RightUltraleapMixedRealityHandControllerProfile
+  m_EditorClassIdentifier: 
+  controllerType:
+    reference: b18a9a6c-e5fd-40ae-89e9-9822415ec62b
+  handedness: 2
+  visualizationProfile: {fileID: 11400000, guid: 1e3becca3719bfe4897baae4e8f602a2,
+    type: 2}
+  useCustomInteractions: 0
+  interactionMappingProfiles:
+  - {fileID: 11400000, guid: 5510a602f2a547a47a2f78ee464aa0c9, type: 2}
+  - {fileID: 11400000, guid: 85befd14a25d8f242b8c0868e9981982, type: 2}
+  - {fileID: 11400000, guid: ffb04d85a3792874f932dc9e144c08b3, type: 2}
+  - {fileID: 11400000, guid: 8c562df2003a0a145879bcf01af8f502, type: 2}
+  - {fileID: 11400000, guid: 7585dcf31b9848b49b3cceed004deeea, type: 2}
+  - {fileID: 11400000, guid: 863d0dc67b45c70489dfcccc4da41696, type: 2}
