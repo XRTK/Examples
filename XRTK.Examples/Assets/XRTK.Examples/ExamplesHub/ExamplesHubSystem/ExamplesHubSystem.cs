@@ -9,6 +9,11 @@ using XRTK.Examples.ExamplesHub.Definitions;
 using XRTK.Examples.ExamplesHub.Interfaces;
 using XRTK.Services;
 
+#if UNITY_EDITOR
+using System.Linq;
+using UnityEditor;
+#endif
+
 namespace XRTK.Examples.ExamplesHub
 {
     [System.Runtime.InteropServices.Guid("6191eb65-ec4c-434a-9a43-939fbc398582")]
@@ -41,6 +46,13 @@ namespace XRTK.Examples.ExamplesHub
         public override void Initialize()
         {
             base.Initialize();
+
+#if UNITY_EDITOR
+            // When in editor and the system gets initialized we want to make sure
+            // all the examples can run in play mode and in a build, so we have to
+            // add them to the build config.
+            AddExampleScenesToBuildConfiguration();
+#endif
 
             if (!Application.isPlaying)
             {
@@ -133,5 +145,35 @@ namespace XRTK.Examples.ExamplesHub
                 ExamplesUI.SetActive(true);
             }
         }
+
+#if UNITY_EDITOR
+        private void AddExampleScenesToBuildConfiguration()
+        {
+            var scenes = EditorBuildSettings.scenes;
+            var updatedBuildScenes = new Dictionary<string, EditorBuildSettingsScene>();
+            for (var i = 0; i < scenes.Length; i++)
+            {
+                var scene = scenes[i];
+                updatedBuildScenes.Add(scene.path, scene);
+            }
+
+            for (var i = 0; i < allExamples.Count; i++)
+            {
+                var example = allExamples[i];
+                var results = AssetDatabase.FindAssets($"t:Scene {example.SceneName}");
+                if (results.Length > 0)
+                {
+                    var sceneAssetGUID = results[0];
+                    var sceneAssetPath = AssetDatabase.GUIDToAssetPath(sceneAssetGUID);
+                    if (!updatedBuildScenes.ContainsKey(sceneAssetPath))
+                    {
+                        updatedBuildScenes.Add(sceneAssetPath, new EditorBuildSettingsScene(sceneAssetPath, true));
+                    }
+                }
+            }
+
+            EditorBuildSettings.scenes = updatedBuildScenes.Values.ToArray();
+        }
+#endif
     }
 }
