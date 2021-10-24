@@ -45,7 +45,7 @@ namespace XRTK.Examples.Demos.BoundarySystem
 
             if (MixedRealityToolkit.TryGetSystem<IMixedRealityCameraSystem>(out var cameraSystem))
             {
-                markerParent.transform.parent = cameraSystem.MainCameraRig.PlayspaceTransform;
+                markerParent.transform.parent = cameraSystem.MainCameraRig.RigTransform;
             }
         }
 
