@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using XRTK.Examples.ExamplesHub.Definitions;
 using XRTK.Examples.ExamplesHub.Interfaces;
 using XRTK.Services;
+using XRTK.Utilities;
 
 #if UNITY_EDITOR
 using System.Linq;
@@ -75,7 +76,9 @@ namespace XRTK.Examples.ExamplesHub
                 for (int j = 0; j < example.RuntimePlatforms.Count; j++)
                 {
                     var platform = example.RuntimePlatforms[j];
-                    if (platform.IsAvailable)
+                    if (platform.IsAvailable &&
+                        ((XRDeviceUtilities.IsDisplayOpaque && example.WorksWithOpaqueDisplay) ||
+                        (!XRDeviceUtilities.IsDisplayOpaque && example.WorksWithTransparentDisplay)))
                     {
                         compatibleExamples.Add(example);
                         break;
