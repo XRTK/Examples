@@ -10,7 +10,7 @@ using XRTK.Utilities;
 namespace XRTK.Examples.Demos.Locomotion
 {
     /// <summary>
-    /// UI controller for the locomotion system demo UI.
+    /// UI controller for the <see cref="ILocomotionSystem"/> demo.
     /// </summary>
     public class UILocomotionDemo : MonoBehaviour
     {
@@ -61,7 +61,7 @@ namespace XRTK.Examples.Demos.Locomotion
         }
 
         /// <summary>
-        /// Exits the locomotion demo scene.
+        /// Exits the demo scene.
         /// </summary>
         public void ExitDemo_OnClick()
         {
