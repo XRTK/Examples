@@ -5,9 +5,12 @@
 [Oo]bj/
 [Bb]in/
 [Bb]uilds/
+[Uu]serSettings/
 [Bb]uild/
 [Ll]ibrary/
 [Aa]pp/
+[Aa]pp.meta
+UserSettings/
 UWP/
 WindowsStoreApp/
 UnityGenerated/
@@ -19,6 +22,7 @@ project.lock.json
 *.package
 TextMesh Pro.meta
 TextMesh Pro/
+UIElementsSchema/
 *packages-lock.json
 
 # ============ #
@@ -58,6 +62,17 @@ obj/
 # Visual Studio Code Generated #
 # ============================ #
 .vscode/
+
+# ========================= #
+# Jetbrains Rider Generated #
+# ========================= #
+.idea/
+_ReSharper.Caches
+
+# ===================== #
+# System Specific List #
+# ===================== #
+.DS_Store
 
 # ===================== #
 # Project Specific List #
