@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+#if XRTK_GLTF
+
 using System;
 using UnityEngine;
 using XRTK.Utilities.Gltf.Serialization;
@@ -52,3 +54,5 @@ namespace XRTK.Examples.Demos.Gltf
         }
     }
 }
+
+#endif
