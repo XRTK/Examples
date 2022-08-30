@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using XRTK.Definitions.InputSystem;
+using UnityEngine.InputSystem;
 using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
-using XRTK.Interfaces.InputSystem;
 using XRTK.Interfaces.InputSystem.Handlers;
 using XRTK.SDK.Input.Handlers;
 using XRTK.Services;
@@ -23,19 +22,19 @@ namespace XRTK.Examples.Demos.Input
     {
         [SerializeField]
         [Tooltip("The action that will be used for selecting objects.")]
-        private MixedRealityInputAction selectAction = MixedRealityInputAction.None;
+        private InputAction selectAction;
 
         [SerializeField]
         [Tooltip("The action that will move the camera forward, back, left, and right.")]
-        private MixedRealityInputAction movementAction = MixedRealityInputAction.None;
+        private InputAction movementAction;
 
         [SerializeField]
         [Tooltip("The action that will pivot the camera on it's axis.")]
-        private MixedRealityInputAction rotateAction = MixedRealityInputAction.None;
+        private InputAction rotateAction;
 
         [SerializeField]
         [Tooltip("The action that will move the camera up or down vertically.")]
-        private MixedRealityInputAction heightAction = MixedRealityInputAction.None;
+        private InputAction heightAction;
 
         private Vector3 newPosition = Vector3.zero;
 
@@ -73,19 +72,19 @@ namespace XRTK.Examples.Demos.Input
 
         void IMixedRealityInputHandler.OnInputUp(InputEventData eventData)
         {
-            Debug.Log($"[OnInputUp] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
+            Debug.Log($"[OnInputUp] {eventData.InputSource.SourceName} | {eventData.InputAction}");
         }
 
         void IMixedRealityInputHandler.OnInputDown(InputEventData eventData)
         {
-            Debug.Log($"[OnInputDown] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
+            Debug.Log($"[OnInputDown] {eventData.InputSource.SourceName} | {eventData.InputAction}");
         }
 
         void IMixedRealityInputHandler<float>.OnInputChanged(InputEventData<float> eventData)
         {
-            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
 
-            if (eventData.MixedRealityInputAction == heightAction)
+            if (eventData.InputAction == heightAction)
             {
                 newPosition.x = 0f;
                 newPosition.y = eventData.InputData;
@@ -96,16 +95,16 @@ namespace XRTK.Examples.Demos.Input
 
         void IMixedRealityInputHandler<Vector2>.OnInputChanged(InputEventData<Vector2> eventData)
         {
-            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
 
-            if (eventData.MixedRealityInputAction == movementAction)
+            if (eventData.InputAction == movementAction)
             {
                 newPosition.x = eventData.InputData.x;
                 newPosition.y = 0f;
                 newPosition.z = eventData.InputData.y;
                 gameObject.transform.position += newPosition;
             }
-            else if (eventData.MixedRealityInputAction == rotateAction)
+            else if (eventData.InputAction == rotateAction)
             {
                 newRotation.x = eventData.InputData.x;
                 newRotation.y = eventData.InputData.y;
@@ -114,17 +113,17 @@ namespace XRTK.Examples.Demos.Input
 
         void IMixedRealityInputHandler<Vector3>.OnInputChanged(InputEventData<Vector3> eventData)
         {
-            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityInputHandler<Quaternion>.OnInputChanged(InputEventData<Quaternion> eventData)
         {
-            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityInputHandler<MixedRealityPose>.OnInputChanged(InputEventData<MixedRealityPose> eventData)
         {
-            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         #endregion IMixedRealityInputHandler Implementation
@@ -147,52 +146,52 @@ namespace XRTK.Examples.Demos.Input
 
         void IMixedRealityGestureHandler.OnGestureStarted(InputEventData eventData)
         {
-            Debug.Log($"[OnGestureStarted] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
+            Debug.Log($"[OnGestureStarted] {eventData.InputSource.SourceName} | {eventData.InputAction.name}");
         }
 
         void IMixedRealityGestureHandler.OnGestureUpdated(InputEventData eventData)
         {
-            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
+            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.InputAction.name}");
         }
 
         void IMixedRealityGestureHandler.OnGestureCompleted(InputEventData eventData)
         {
-            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
+            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.InputAction.name}");
         }
 
         void IMixedRealityGestureHandler<Vector3>.OnGestureUpdated(InputEventData<Vector3> eventData)
         {
-            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityGestureHandler<Vector3>.OnGestureCompleted(InputEventData<Vector3> eventData)
         {
-            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityGestureHandler<Quaternion>.OnGestureUpdated(InputEventData<Quaternion> eventData)
         {
-            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityGestureHandler<Quaternion>.OnGestureCompleted(InputEventData<Quaternion> eventData)
         {
-            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityGestureHandler<MixedRealityPose>.OnGestureUpdated(InputEventData<MixedRealityPose> eventData)
         {
-            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            Debug.Log($"[OnGestureUpdated] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityGestureHandler<MixedRealityPose>.OnGestureCompleted(InputEventData<MixedRealityPose> eventData)
         {
-            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description} | {eventData.InputData}");
+            Debug.Log($"[OnGestureCompleted] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
         }
 
         void IMixedRealityGestureHandler.OnGestureCanceled(InputEventData eventData)
         {
-            Debug.Log($"[OnGestureCanceled] {eventData.InputSource.SourceName} | {eventData.MixedRealityInputAction.Description}");
+            Debug.Log($"[OnGestureCanceled] {eventData.InputSource.SourceName} | {eventData.InputAction.name}");
         }
 
         #endregion IMixedRealityGestureHandler Implementation

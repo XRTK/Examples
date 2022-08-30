@@ -2,7 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
-using XRTK.Definitions.InputSystem;
+using UnityEngine.InputSystem;
 using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
 using XRTK.Interfaces.InputSystem;
@@ -28,10 +28,10 @@ namespace XRTK.Examples.Demos.HandController.UX
         private Quaternion startRotation;
 
         [SerializeField]
-        private MixedRealityInputAction grabAction = MixedRealityInputAction.None;
+        private InputAction grabAction;
 
         [SerializeField]
-        private MixedRealityInputAction gripPoseAction = MixedRealityInputAction.None;
+        private InputAction gripPoseAction;
 
         [SerializeField]
         [Tooltip("If the distance to the grabbed object is above the threshold it will lerp towards the grab pose.")]
@@ -70,7 +70,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.Handedness == gripHandedness && eventData.MixedRealityInputAction == gripPoseAction && isGripped)
+            if (eventData.Handedness == gripHandedness && eventData.InputAction == gripPoseAction && isGripped)
             {
                 if (Vector3.Distance(transform.position, eventData.InputData.Position) <= lerpDistanceThreshold)
                 {
@@ -94,7 +94,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (!isGripped && eventData.MixedRealityInputAction == grabAction)
+            if (!isGripped && eventData.InputAction == grabAction)
             {
                 isGripped = true;
                 gripHandedness = eventData.Handedness;
@@ -116,7 +116,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.MixedRealityInputAction == grabAction)
+            if (eventData.InputAction == grabAction)
             {
                 isGripped = false;
 
