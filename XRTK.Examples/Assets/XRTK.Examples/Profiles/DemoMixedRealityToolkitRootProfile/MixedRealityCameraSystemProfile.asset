@@ -29,29 +29,11 @@ MonoBehaviour:
   - instancedType:
       reference: 83eff552-adf4-47c8-ad53-df7406856d3f
     name: Oculus Camera Data Provider
-    priority: 1
+    priority: 0
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
       - reference: db1acc26-ec8d-4bc6-afca-c51351b2da2e
     profile: {fileID: 11400000, guid: 69601914bd8789b49bc45cc0a9220b4d, type: 2}
-  - instancedType:
-      reference: 49e17dac-c786-4b1a-a66a-54da654923d5
-    name: Lumin Camera Data Provider
-    priority: 1
-    platformEntries:
-      runtimePlatforms:
-      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
-      - reference: 39ebb366-21a7-4d08-9412-036b32976d0c
-    profile: {fileID: 11400000, guid: 10c5453922d4a744595e0415ef57dda4, type: 2}
-  - instancedType:
-      reference: 0f33b864-e4b9-4697-af40-f7772f3bc596
-    name: Windows Mixed Reality Camera Data Provider
-    priority: 2
-    platformEntries:
-      runtimePlatforms:
-      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
-      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
-    profile: {fileID: 11400000, guid: 57a7de86787ebb74ead8edbc180d4d14, type: 2}
   globalCameraProfile: {fileID: 11400000, guid: c02516a14adf1ff45b2e6feaefd1d090,
     type: 2}

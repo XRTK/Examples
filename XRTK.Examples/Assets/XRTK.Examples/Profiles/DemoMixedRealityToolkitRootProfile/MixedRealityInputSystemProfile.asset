@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   configurations:
   - instancedType:
+      reference: 067ce7d4-8277-4e18-834e-3dc712074b72
+    name: Mouse Data Provider
+    priority: 7
+    platformEntries:
+      runtimePlatforms:
+      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
+      - reference: 58de2d2a-db5f-4090-a949-4028b8ea3afd
+      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
+      - reference: a2ffb628-3ce7-4759-9c66-8f2ba8d16fc2
+      - reference: 97344133-03b4-4314-9581-e42d1aac91ba
+    profile: {fileID: 11400000, guid: a2a4350cf0bc6a84cb524749c3c95eae, type: 2}
+  - instancedType:
       reference: 4d4d36e3-6acb-45e5-8316-0b15a098ea2f
     name: Unity Touch Data Provider
     priority: 0
@@ -30,7 +42,7 @@ MonoBehaviour:
   - instancedType:
       reference: a4d8d13b-253c-469a-a3a2-ecfe16dd969f
     name: Unity Joystick Data Provider
-    priority: 0
+    priority: 1
     platformEntries:
       runtimePlatforms:
       - reference: dac9ead8-54f9-4935-a27f-9f82f465c972
@@ -55,7 +67,7 @@ MonoBehaviour:
   - instancedType:
       reference: 07512ffc-5128-434c-b7bf-5cd7ca8ef853
     name: Simulated Hand Controller Data Provider
-    priority: 2
+    priority: 3
     platformEntries:
       runtimePlatforms:
       - reference: 3324b4a2-30f0-4145-bb06-cd65b8945487
@@ -63,7 +75,7 @@ MonoBehaviour:
   - instancedType:
       reference: 12e24f3d-7689-4863-a403-dd7a80da3c25
     name: Windows Speech Data Provider
-    priority: 3
+    priority: 4
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
@@ -73,7 +85,7 @@ MonoBehaviour:
   - instancedType:
       reference: 9d96d660-cb10-48b8-b2a7-3262adb2ab14
     name: Windows Dictation Data Provider
-    priority: 4
+    priority: 5
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
@@ -83,7 +95,7 @@ MonoBehaviour:
   - instancedType:
       reference: 0de5da40-feb8-4891-b9b2-942eafd041b9
     name: Oculus Controller Data Provider
-    priority: 5
+    priority: 6
     platformEntries:
       runtimePlatforms:
       - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
@@ -99,50 +111,9 @@ MonoBehaviour:
       - reference: db1acc26-ec8d-4bc6-afca-c51351b2da2e
     profile: {fileID: 11400000, guid: d9b3b9f611dffee4883c089dc35e0ce7, type: 2}
   - instancedType:
-      reference: 851006a2-0762-49aa-80a5-a01c9a8dbb58
-    name: Lumin Controller Data Provider
-    priority: 7
-    platformEntries:
-      runtimePlatforms:
-      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
-      - reference: 39ebb366-21a7-4d08-9412-036b32976d0c
-    profile: {fileID: 11400000, guid: 5e14f9e6f5088544a932ed6a0f1e7cf1, type: 2}
-  - instancedType:
-      reference: 9511d571-2e24-41ef-aa7e-df4432617de1
-    name: Lumin Hand Controller Data Provider
-    priority: 8
-    platformEntries:
-      runtimePlatforms:
-      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
-      - reference: 39ebb366-21a7-4d08-9412-036b32976d0c
-    profile: {fileID: 11400000, guid: 0cd9251200b020a4797b46b8679c570f, type: 2}
-  - instancedType:
-      reference: 12e02ef8-4177-46ab-bc50-19af7148bd4a
-    name: Windows Mixed Reality Controller Data Provider
-    priority: 9
-    platformEntries:
-      runtimePlatforms:
-      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
-      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
-      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
-      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
-    profile: {fileID: 11400000, guid: 8e0139954c0b0ab41a6f5fce7c0594e1, type: 2}
-  - instancedType:
-      reference: 067ce7d4-8277-4e18-834e-3dc712074b72
-    name: Mouse Data Provider
-    priority: 10
-    platformEntries:
-      runtimePlatforms:
-      - reference: c838c4f5-a87e-48c7-8742-09a4d85fc3bc
-      - reference: 58de2d2a-db5f-4090-a949-4028b8ea3afd
-      - reference: 7dc72b4e-34f6-4b26-afd7-cde0c51f83a3
-      - reference: a2ffb628-3ce7-4759-9c66-8f2ba8d16fc2
-      - reference: 97344133-03b4-4314-9581-e42d1aac91ba
-    profile: {fileID: 11400000, guid: a2a4350cf0bc6a84cb524749c3c95eae, type: 2}
-  - instancedType:
       reference: 61cec407-ffa4-4a5c-b96a-5229348f85c2
     name: Ultraleap Hand Controller Data Provider
-    priority: 11
+    priority: 8
     platformEntries:
       runtimePlatforms:
       - reference: 58de2d2a-db5f-4090-a949-4028b8ea3afd
