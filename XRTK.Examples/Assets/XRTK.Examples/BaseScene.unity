@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 1808997903}
   - component: {fileID: 1808997902}
   m_Layer: 0
-  m_Name: TrackingSpace
+  m_Name: XRRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
