@@ -28,10 +28,10 @@ namespace XRTK.Examples.Demos.HandController.UX
         private Quaternion startRotation;
 
         [SerializeField]
-        private InputAction grabAction;
+        private InputActionReference grabAction;
 
         [SerializeField]
-        private InputAction gripPoseAction;
+        private InputActionReference gripPoseAction;
 
         [SerializeField]
         [Tooltip("If the distance to the grabbed object is above the threshold it will lerp towards the grab pose.")]
@@ -70,7 +70,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.Handedness == gripHandedness && eventData.InputAction == gripPoseAction && isGripped)
+            if (eventData.Handedness == gripHandedness && eventData.InputAction == gripPoseAction.action && isGripped)
             {
                 if (Vector3.Distance(transform.position, eventData.InputData.Position) <= lerpDistanceThreshold)
                 {
@@ -94,7 +94,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (!isGripped && eventData.InputAction == grabAction)
+            if (!isGripped && eventData.InputAction == grabAction.action)
             {
                 isGripped = true;
                 gripHandedness = eventData.Handedness;
@@ -116,7 +116,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.InputAction == grabAction)
+            if (eventData.InputAction == grabAction.action)
             {
                 isGripped = false;
 

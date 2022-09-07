@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿// Copyright (c) XRTK. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using UnityEngine;
 using UnityEngine.InputSystem;
 using XRTK.Definitions.Utilities;
 using XRTK.EventDatum.Input;
@@ -21,20 +24,16 @@ namespace XRTK.Examples.Demos.Input
             IMixedRealityGestureHandler<MixedRealityPose>
     {
         [SerializeField]
-        [Tooltip("The action that will be used for selecting objects.")]
-        private InputAction selectAction;
-
-        [SerializeField]
         [Tooltip("The action that will move the camera forward, back, left, and right.")]
-        private InputAction movementAction;
+        private InputActionReference movementAction = null;
 
         [SerializeField]
         [Tooltip("The action that will pivot the camera on it's axis.")]
-        private InputAction rotateAction;
+        private InputActionReference rotateAction = null;
 
         [SerializeField]
         [Tooltip("The action that will move the camera up or down vertically.")]
-        private InputAction heightAction;
+        private InputActionReference heightAction = null;
 
         private Vector3 newPosition = Vector3.zero;
 
@@ -84,7 +83,7 @@ namespace XRTK.Examples.Demos.Input
         {
             // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
 
-            if (eventData.InputAction == heightAction)
+            if (eventData.InputAction == heightAction.action)
             {
                 newPosition.x = 0f;
                 newPosition.y = eventData.InputData;
@@ -97,14 +96,14 @@ namespace XRTK.Examples.Demos.Input
         {
             // Debug.Log($"[OnInputChanged] {eventData.InputSource.SourceName} | {eventData.InputAction.name} | {eventData.InputData}");
 
-            if (eventData.InputAction == movementAction)
+            if (eventData.InputAction == movementAction.action)
             {
                 newPosition.x = eventData.InputData.x;
                 newPosition.y = 0f;
                 newPosition.z = eventData.InputData.y;
                 gameObject.transform.position += newPosition;
             }
-            else if (eventData.InputAction == rotateAction)
+            else if (eventData.InputAction == rotateAction.action)
             {
                 newRotation.x = eventData.InputData.x;
                 newRotation.y = eventData.InputData.y;
