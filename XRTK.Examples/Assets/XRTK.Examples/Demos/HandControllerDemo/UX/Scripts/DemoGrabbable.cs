@@ -70,7 +70,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.Handedness == gripHandedness && eventData.InputAction == gripPoseAction.action && isGripped)
+            if (eventData.Handedness == gripHandedness && eventData.Context.action == gripPoseAction.action && isGripped)
             {
                 if (Vector3.Distance(transform.position, eventData.InputData.Position) <= lerpDistanceThreshold)
                 {
@@ -94,7 +94,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (!isGripped && eventData.InputAction == grabAction.action)
+            if (!isGripped && eventData.Context.action == grabAction.action)
             {
                 isGripped = true;
                 gripHandedness = eventData.Handedness;
@@ -116,7 +116,7 @@ namespace XRTK.Examples.Demos.HandController.UX
                 return;
             }
 
-            if (eventData.InputAction == grabAction.action)
+            if (eventData.Context.action == grabAction.action)
             {
                 isGripped = false;
 
